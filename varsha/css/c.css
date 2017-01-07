@@ -1,0 +1,64 @@
+body
+{
+	background-image: url("../img/bk.jpg");
+}
+
+
+
+
+
+
+
+
+
+h1
+{
+	text-align: center;
+	color: black;
+}
+
+p.a
+{
+	display: inline-block;
+	border-style:solid;
+	border-color:pink;
+	background-color:yellow;
+	color: blue;
+	margin: 20px;
+}
+p.b
+{
+	display: inline-block;
+     
+	border-style:solid;
+
+	border-color:pink;
+	background-color:yellow;
+	color: blue;	
+	margin: 20px;
+}
+p.c
+{
+	display: inline-block;
+     
+	border-style:solid;
+	border-color:pink;
+	background-color:yellow;
+	color: blue;
+	margin: 20px;	
+}
+
+h2
+{
+
+	top: 40px;
+	right:20 
+color: green;
+	border:solid;
+	border-color: black;
+	float: right;
+	width: 200px;
+	height: 30px;
+	margin: 20px;
+}
+

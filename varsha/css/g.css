@@ -1,0 +1,50 @@
+div.a
+{
+	position: absolute;
+	border-style: solid;
+	border-color: #48D1CC;
+	
+	color: #48D1CC;
+	width: 250px;
+	height: 150px;
+	bottom: 50px;
+	
+	padding: 15px;
+	right: 1000px;
+	bottom:0px;
+}
+
+
+
+div.b
+{
+	position: absolute;
+	border-style: solid;
+	border-color: #48D1CC;
+	
+	color: #48D1CC;
+	width: 250px;
+	height: 150px;
+	bottom: 50px;
+	
+	padding: 15px;
+	right: 650px;
+	bottom:0px;
+}
+
+div.c
+{
+
+position: absolute;
+	border-style: solid;
+	border-color: #48D1CC;
+	
+	color: #48D1CC;
+	width: 250px;
+	height: 150px;
+	bottom: 50px;
+	
+	padding: 15px;
+	right: 300px;
+	bottom:0px;
+}	

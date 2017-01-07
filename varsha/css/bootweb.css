@@ -1,0 +1,43 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+
+div.a
+{
+
+	position: absolute;
+	border-style: solid;
+	border-width: 0;
+	border-color:  white;
+	width: 1000px;
+	height: 150px;
+	float: right;
+
+}
+
+div.b
+{
+	position: absolute;
+	border-style: solid;
+	border-width: 0;
+	border-color: white;
+	height: 150px;
+	width: 400px;
+right:0PX;
+
+}
+
+.navbar-inverse {
+    background-color: #6495ED;
+    border-color: #6495ED;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #080808;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #080808;
+}
