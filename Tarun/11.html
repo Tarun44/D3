@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#dis{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<h1>this is to edit the text using script</h1>
+<p id="text">This text will be change its font properties by clicking the button</p>
+<button type="button" onclick="document.getElementById('text').style.fontSize='35px'">clike me</button>
+<p id="dis">this text will be hide if we click next button</p>
+<script type="text/javascript">
+function myFunction() {
+ if(document.getElementById("dis").style.display != "block"){
+  document.getElementById("dis").style.display ="block";
+  }
+  else{
+    document.getElementById("dis").style.display="none";
+  }
+}
+</script>
+<button type="button" onclick="myFunction()">Next button</button>
+</body>
+</html>

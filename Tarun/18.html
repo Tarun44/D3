@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form id = "mycanvas" action="upload.php" method="post" enctype="multipart/form-data">
+<input type="file" name="fileToUpload" id="fileToUpload">
+</form>
+
+<script type="text/javascript">
+var reader = new FileReader();
+reader.onload = function(event) {
+    var dataUri = event.target.result,
+        context = document.getElementById("mycanvas").getContext("2d"),
+        img     = new Image();
+
+    // wait until the image has been fully processed
+    img.onload = function() {
+        context.drawImage(img, 100, 100);
+    };
+    img.src = ;
+};
+
+reader.onerror = function(event) {
+    console.error("File could not be read! Code " + event.target.error.code);
+};
+
+reader.readAsDataURL(file);
+</script>
+</body>
+</html>
