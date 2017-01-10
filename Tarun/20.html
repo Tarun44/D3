@@ -6,11 +6,39 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>demo1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="javascript/libs/jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $('ul li').each(function(e){
+                    if(e != 2){
+                        $(this).css('background','lightgreen');
+                    }
+                   $(this).append(e);
+                });
+            });
+        </script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <h1>HEADING !</h1>
+        <ul>
+            <li>this is the text</li>
+            <li>this is the text</li>
+            <li>this is the text</li>
+            <li>this is the text</li>
+            <li>this is the text</li>
+            <li>this is the text</li>
+        </ul>
+        <h2>HEADING !</h2>
+        <ul>
+            <li>this is the text</li>
+            <li>this is the text</li>
+            <li>this is the text</li>
+            <li>this is the text</li>
+            <li>this is the text</li>
+            <li>this is the text</li>
+        </ul>
     </body>
 </html>
