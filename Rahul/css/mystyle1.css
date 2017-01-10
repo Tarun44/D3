@@ -1,0 +1,21 @@
+body{
+	background-image:url("../image/4.jpg");
+	margin: 80px;
+    }
+
+h2{
+	font-family:serif;
+	font-weight: bold;
+	text-align: right;
+	color:#F0FFF0;
+	text-decoration:underline;
+
+  }
+
+  label{
+  	color:	#8A2BE2;
+       }
+
+#place{
+	color:green;
+}
