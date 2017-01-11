@@ -5,6 +5,16 @@ div.a
 	background-image: url("../img/contact1.jpg");
 	height: 500px;
 }
+div.d
+{
+	background-color: rgba(3, 169, 244, 0.75);
+    position: relative;
+    bottom: 0 px;
+    padding-bottom: 222px;
+}
+
+}
+
 
 
 .navbar-inverse .navbar-nav>li>a {
@@ -56,4 +66,9 @@ div.b
     margin-left: 217px;
     margin-right: 308px;
 }
+div.e
+{
+	position: relative;
+	left: 233px;
+    bottom: -59px;
 }
