@@ -4,22 +4,75 @@
 <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
 <script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 <style>
+	h1{
+	
+		color: solid blue;
+		width: 660px;
+	}
+	body{
+		position: absolute;
+		left: 400px;
+		 border: 2px solid black;
+		 border-radius: 5px;
+		 width:700px;
+         margin: 10px;
+	}
+	.main-container
+	{
+		width: 100%;
+		
 
-.a
-{
-	background-color: powderblue;
-	color:blue;
-	overflow-x: 10%;
-	font-size: 20px;
-	margin: 0;
-	padding: 1px;
+		}
 
-}
 </style>
-	<div class="a">Registration</div>
-
 </head>
 <body>
-
-</body>
-</html>
+<div class="main-container" style="background-image: url(../img/bg7.jpg)">
+<h1 class="text-center"> SignUp Form for <strong> Bootstrap</strong></h1>
+<form>
+<img src="../img/shalini.jpg">
+<form class="form-inline">
+    <div class="form-group">
+     <label for="first name">First Name:</label>
+      <input type="first Name" class="form-control" id="first name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label for="last name">Last Name:</label>
+      <input type="last name" class="form-control" id="last name" placeholder="Enter last name">
+    </div>
+    <div>
+    <h4>Choose your gender</h4>
+        <label class="radio-inline"><input type="radio" name="gender"> Male</label>
+        <label class="radio-inline"><input type="radio" name="gender"> Female</label>
+        </div>
+        <div class="form-group">
+  <label for="Address">Address:</label>
+  <textarea class="form-control" rows="5" id="Address"></textarea>
+</div>
+        
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Confirm Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Confirm password">
+    </div>
+     <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <div class="form-group">
+            <div class="col-xs-offset-3 col-xs-9">
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="agree">  I agree to the <a href="#">Terms and Conditions</a>.
+                </label>
+            </div>
+            <div>
+    <button type="submit" class="btn btn-default">Register</button>
+    </div>
+  </form>
+</div>
