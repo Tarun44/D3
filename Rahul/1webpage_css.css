@@ -1,0 +1,40 @@
+body{
+	background-image:url("bgimg.jpg");
+}
+ .first{
+ 	width:245px;
+    background-color: bisque;
+    margin-top:15%;
+    margin-left:43%;
+    font-weight: bold;
+ }
+ .navbar-header .navbar-brand{
+ 			    color: blue;
+   				font-weight: bold;
+   				margin-left:50px;
+}
+ 
+ .second{
+ 	width: 350px;
+    background-color: bisque;
+    font-weight: bold;
+    margin-left: 39%;
+    margin-top: 01%;
+ }
+ .third{
+ 	background-color:cornsilk;
+ }
+ .cl{
+ 	color:crimson;
+ }
+ .div1{
+ 	background-color: whitesmoke;
+    height: 250px;
+    width: 100%;
+}
+    
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #555;
+    background-color: rgba(0,0,0,.25);
+}
+
