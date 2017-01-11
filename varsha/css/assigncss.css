@@ -1,0 +1,59 @@
+div.a
+{
+
+
+	background-image: url("../img/contact1.jpg");
+	height: 500px;
+}
+
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #e0d8d8;
+}
+
+.navbar-nav>li>a {
+    position:relative;
+    padding-top: 28px;
+    padding-bottom: 51px;
+    padding-left: : 21PX;
+    left: -257PX;
+}
+.navbar-brand {
+    position: relative;
+    right: -245px;
+    bottom: -17px;
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+
+.well {
+	position: relative;
+    min-height: 3px;
+    bottom: -97px;
+   
+    padding: 12px;
+    margin-left: 423px;
+    margin-right: 456px;
+    margin-bottom: 8px;
+    background-color: rgba(0, 0, 0, 0.44);
+    border: 1px solid rgba(227, 227, 227, 0.08);
+    color: white;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+div.b
+{
+	position: relative;
+
+    position: relative;
+    left: 29px;
+    margin-left: 217px;
+    margin-right: 308px;
+}
+}
