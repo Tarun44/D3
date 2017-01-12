@@ -7,13 +7,18 @@ div.a
 }
 div.d
 {
-	background-color: rgba(3, 169, 244, 0.75);
+	
+        background-color: rgba(3, 169, 244, 0.75);
     position: relative;
-    bottom: 0 px;
-    padding-bottom: 222px;
+    padding-bottom: -304px;
+    border-style: solid;
+    height: 283px;
+    border-color: rgba(3, 169, 244, 0.18);
+    color: white;
 }
 
-}
+
+
 
 
 
@@ -70,5 +75,245 @@ div.e
 {
 	position: relative;
 	left: 233px;
+    bottom: -53px;
+}
+div.e
+{
+    position: relative;
+    left: 233px;
     bottom: -59px;
+}
+
+div.f
+{
+   
+    position: relative;
+    left: 505px;
+    bottom: 70px;
+}
+
+div.g
+{
+    position: relative;
+   left: 772px;
+    bottom: 193px
+}
+
+div.h
+{
+    position: relative;
+   left: 1054px;
+    bottom: 319px;
+}
+
+
+.navbar-default {
+    background-color: rgba(248, 248, 248, 0);
+    border-color: rgba(231, 231, 231, 0);
+}
+
+
+   div.k {
+    position: relative;
+
+    left: 175px;
+    bottom: -72px;
+}
+
+
+div.hello
+{
+
+    position: relative;
+    background-color: rgba(53, 52, 49, 0.81);
+    padding-bottom: 0px;
+    color: white;
+}
+div.video
+{
+    
+    position: relative;
+    left: 653px;
+    top: -143px;
+}
+div.box {
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.25);
+    padding-left: 2px;
+    padding-bottom: 7px;
+    margin-left: -4px;
+    margin-right: 11px;
+    padding-top: 5px;
+    text-align: center;
+    width: 110px;
+    position: relative;
+    top: -122px;
+    left: 174px;
+}
+a
+{
+    color: solid black;
+}
+
+ a:hover {
+    color: #020202;
+    text-decoration: underline;
+}
+
+div.cam
+{
+    background-image: url(../img/camera2.jpg);
+    height: 650px;
+
+}
+
+div.twi {
+    position: relative;
+    height: 221px;
+    color: white;
+    border-style: solid;
+    border-color: rgba(3, 169, 244, 0.75);
+    background-color: rgba(3, 169, 244, 0.75);
+}
+div.mov {
+    position: relative;
+    left: 515px;
+    bottom: -57px;
+}
+
+
+
+
+div.john {
+    position: relative;
+    left: 230px;
+    color: #E91E63;
+    top: 86px;
+}
+
+div.john2 {
+    position: relative;
+    left: 777px;
+    top: -68px;
+    color: bisque;
+}
+div.box1
+{
+    border-style: solid;
+    position: relative;
+}
+
+.glyphicon {
+    position: relative;
+    top: 7px;
+    margin-left: 20px;
+    left: 15px;
+    margin: auto;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    }
+
+    div.box1 {
+    border-style: solid;
+    position: relative;
+    width: 49px;
+    height: 38px;
+    bottom: -15px;
+}
+  div.box2 {
+    border-style: solid;
+    position: relative;
+    width: 49px;
+    height: 38px;
+    bottom: 22px;
+    left: 79px
+}
+  div.box3 {
+    border-style: solid;
+    position: relative;
+    width: 49px;
+    height: 38px;
+    bottom: -15px;
+    bottom: 59px;
+    left: 158px;
+}
+  div.box4 {
+    border-style: solid;
+    position: relative;
+    width: 49px;
+    height: 38px;
+    bottom: 96px;
+    left: 234px;
+}
+
+
+div.test {
+    position: relative;
+    height: 200px;
+}
+
+div.test1 {
+    position: relative;
+    font-family: cursive;
+    left: 248px;
+    bottom: -49px;
+}
+
+.h4, h4 {
+    font-size: 18px;
+    color: rgba(35, 35, 17, 0.46);
+}
+
+
+.h5, h5 {
+    font-size: 14px;
+    color: rgba(9, 10, 7, 0.61);
+}
+
+
+div.final
+{
+    background-image: url(../img/grey1.jpg);
+    height: 450px;
+}
+
+.form-control {
+    display: block;
+    width: 22%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border-radius: 0px;
+}
+
+
+textarea.form-control {
+    height: auto;
+    width: 606px;
+}
+
+
+div.final1 {
+    position: relative;
+    left: 264px;
+    bottom: -68px;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+    width: 234px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    width: 234px;
 }
