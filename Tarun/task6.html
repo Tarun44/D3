@@ -83,8 +83,8 @@ body {
 
   /* Navbar positioning foo */
   .navbar-wrapper {
-      margin: 20px 300px -90px 280px;
-
+      margin: 20px 500px -90px 280px;
+  }
     
 
     /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
@@ -103,8 +103,32 @@ body {
     font-size: 21px;
     line-height: 1.4;
   }
-}
-
+  .container2>a{
+      position: absolute;
+    top: 760px;
+    left: 110px;
+  }
+  .container2>p{
+      
+      position: absolute;
+    top: 760px;
+    left: 670px;
+  }
+  .container2>h1{
+      position: absolute;
+    top: 700px;
+    left: 670px;
+  }
+ .container2>button{
+     color: #00e0d0;
+    border-color: #00e0d0;
+	
+        background-color: Transparent;
+      position: absolute;
+    top: 980px;
+    left: 670px
+        
+  }
  </style>
   <title>my bootstrap page</title>
   <meta charset="utf-8">
@@ -197,13 +221,18 @@ body {
     <i class="glyphicon glyphicon-chevron-right"></i>
   </a>  
 </div>
-<!-- /.carousel -->
-
-<!-- FOOTER -->
-<footer>
-  <p class="pull-right"><a href="#">Back to top</a></p>
-  <p>This Bootstrap layout is compliments of Bootply. · <a href="http://placehold.it/1500X500">Edit on Bootply.com</a></p>
-</footer>
+<div class="container2">
+        <a href="#"><img src="images/sample-logo-black12.png" alt="Brand"  ></a>
+    <h1><b>Our Story</b></h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry<br>
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br>
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.<br>
+        It has survived not only five centuries, but also the leap into electronic typesetting, <br>
+        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets <br>
+        containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus <br>
+        PageMaker including versions of Lorem Ipsum.<br></p>
+    <button type="button" class="btn btn-default">Learn More</button>
+ </div>
 
 </body>
 </html>
