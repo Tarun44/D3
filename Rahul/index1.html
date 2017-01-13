@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Begining of JS</title>
+	 <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/mystyle2.css">
+<script src="first_js.js"> </script>
+</head>
+<body>
+	<div class="container">
+	<h1 class="text-center text-danger"> Welcome to JS </h1>
+	<p class="well text-justify bg">Google is an American multinational technology company specializing in Internet-related services and products that include online advertising technologies, search, cloud computing, software, and hardware.</p>
+<p class="well text-justify">
+Google was founded in 1996 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University, California. Together, they own about 14 percent of its shares and control 56 percent of the stockholder voting power through supervoting stock. They incorporated Google as a privately held company on September 4, 1998. An initial public offering (IPO) took place on August 19, 2004, and Google moved to its new headquarters in Mountain View, California, nicknamed the Googleplex.</p>
+<button class="btn btn-success" onclick="show('Zara',21); me(); full('Zara','Ali');">Click me! </button> <br/>
+<button class="btn btn-info btn-lg" onmouseover="change(this);" onmouseout="out(this);"> !ME!</button>
+<p id="demo"></p>
+<script>
+	
+	var x=20;
+	var y=21;
+	  if(x>y){
+	  	document.write("x is greater! <br />");
+	  }
+	  else{
+	  	document.write("y is greater! <br />")
+	  }
+
+	  var x='sunday';
+	  switch(x)
+	  {
+	  	case 'sunday': document.write("Toady is Sunday <br />");
+	  	break;
+	  	case 'monday': document.write("Today is Monday <br />");
+	  	break;
+	  	default :      document.write("This is good for switch case! <br />");
+	  }
+
+	  var x=10;
+	  while(x>=0){
+	  		document.write( "Number are : "+ x +"<br />");
+	  		x--;
+	  }
+	  		document.write("example do while loop:")
+	  		var x=5;
+	  do{
+	  	document.write("numbers r: "+ x + "<br />")
+	  	x--;
+	  }while(x>=0);
+
+	  var count;
+	   for(count=0;count<2;count++)
+	   	 document.write(count + "<br />")
+
+	   	document.write("<h1>for in loop of JS</h1>")
+	   	 
+var a;
+            document.write("Navigator Object Properties<br /> ");
+         
+            for (a in navigator) {
+               document.write(a);
+               document.write("<br />");
+            }
+
+ var a="RAHUL";
+ console.log(a);
+ 	 
+ 	 var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue."};
+
+document.getElementById("demo").innerHTML ="Candiadte Full Detail is: <br />"+
+"Candidate Name is "+person.firstName+" "+person.lastName+" of age "+person.age+" having eye color "+person.eyeColor;
+
+var x=-2/"APPLE";
+alert(isNaN(x));
+document.write(typeof NaN);
+</script>
+
+
+
+
+
+</div> 
+</body>	
