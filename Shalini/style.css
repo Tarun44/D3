@@ -1,0 +1,107 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: tahoma;
+}
+.hero{
+	position: absolute;
+	width: 1140px;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+header{
+	background-image:url(img/food.jpg);
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+h1{
+	color: #301167;
+
+}
+.icon img{
+	height: 90px;
+	float:left;
+	margin-top: 5px;
+	margin-left: 40px;
+}
+.nav{
+	max-width: 1140px;
+	margin: 0 auto;
+}
+.sub-nav{
+	float: right;
+	list-style: none;
+	margin-top: 40px;
+}
+.sub-nav li{
+	display: inline-block;
+	margin-left: 20px;
+}
+.sub-nav li a{
+	color: rgba(45,1,9,0.95);
+	text-decoration: none;
+	font-size: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.sub-nav li a:hover{
+	color:#4a8a05;
+	border-bottom:2px solid #4a8a05;
+	padding: 10px 0;
+}
+.btn{
+	border: 1px solid #070b92;
+	padding: 10px 30px;
+	color:#070b92;
+	text-decoration: none;
+	margin-right: 20px;
+}
+.button-drop{
+	margin-top: 40px;
+}
+.btn-first:hover{
+background-color: #070b92;
+color: white;
+}
+.btn-sec:hover{
+	background-color:#070b92;
+	color: white;
+}
+h2{
+	text-align: center;
+	text-transform: uppercase;
+}
+.para{
+	width:70%;
+	margin-left: 15%;
+	font-family: cursive;
+	color: green;
+}
+
+.part h2{
+	margin-top: 70px;
+	margin-bottom: 20px;
+}
+.row{
+	column-width: 300px;
+	margin-top: 20px;
+	font-family: -webkit-body;
+}
+.menu img{
+	width: 100%;
+}
+h3{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 40px;
+	margin-top: 50px;
+}
+.cities img{
+	width: 100%;
+}
