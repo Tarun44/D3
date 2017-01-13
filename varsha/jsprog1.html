@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/js.css">
+</head>
+<script>
+
+// function sample1()
+// {
+// document.getElementById('demo').style.display='none';
+// }
+// function sample()
+// {
+// 	var a;
+// 	a=document.getElementById('demo');
+// 	if(a.style.display=='none')
+// 	{
+// a.style.display='block';
+// }
+// else
+// {
+// a.style.display='none';
+// 	}
+
+// }
+
+function sample1()
+{
+	var a,b;
+	a=document.getElementById('demo1');
+	b=document.getElementById('demo');
+	c=document.getElementById('demo2');
+	console.log(a.style.display,b.style.display)
+	if((a.style.display=='none')&&(b.style.display=='block'))
+	{
+a.style.display='block';
+b.style.display='none';
+}
+else
+{
+b.style.display='block';
+a.style.display='none';
+	}
+
+}
+
+</script>
+
+<body>
+
+<div class="a"  style="display: block;" id="demo"><img src="img/pic1.jpg" style="width: 400px;height: 400px;" ></div>
+ <div class="b" style="display: none;" id="demo1"><img src="img/pic2.jpg" style="width: 400px;height: 400px;"></div> 
+ <div class="b" style="display: none;" id="demo2"><img src="img/pic3.jpg" style="width: 400px;height: 400px;"></div> 
+
+<!-- <button type="button1" onclick="sample()">Click Me!</button> -->
+<button type="button1" onclick="sample1()">Click  Me!</button> 
+
+
+</body>
+</html> 

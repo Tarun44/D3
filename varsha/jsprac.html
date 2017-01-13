@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+
+
+
+
+</head>
+<body>
+<img src="img/pic1.jpg">
+<script type="text/javascript">
+	var myImage = document.querySelector('img');
+	console.log(myImage)
+	myImage.onclick = function() {
+	console.log("jeeeff")
+    var mySrc = myImage.getAttribute('src');
+    if(mySrc === 'img/pic1.jpg') {
+      myImage.setAttribute ('src','img/pic2.jpg');
+    } else {
+      myImage.setAttribute ('src','img/pic1.jpg');
+    }
+}
+</script>
+
+</body>
+</html>

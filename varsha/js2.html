@@ -1,0 +1,32 @@
+
+<input type="file" id="fileinput" multiple />
+<script type="text/javascript">
+  function readMultipleFiles(evt) {
+    //Retrieve all the files from the FileList object
+    var files = evt.target.files; 
+    		
+    if (files) {
+        for (var i=0, f; f=files[i]; i++) {
+	          var r = new FileReader();
+            r.onload = (function(f) {
+                return function(e) {
+                     var fileReader = new FileReader();
+            fileReader.onload = function(fileLoadedEvent) 
+            {
+                var imageLoaded = document.createElement("img");
+                imageLoaded.src = fileLoadedEvent.target.result;
+                document.body.appendChild(imageLoaded);
+            };
+                    
+              
+            }(f);
+
+            r.readAsText(f);
+        }   
+    } else {
+	      alert("Failed to load files"); 
+    }
+  }
+  
+  document.getElementById('fileinput').addEventListener('change', readMultipleFiles, false);
+</script>

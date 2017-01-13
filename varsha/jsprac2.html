@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button>click</button>
+<h1></h1>
+<script type="text/javascript">
+	
+var myButton = document.querySelector('button');
+var p=document.querySelector('h1');
+myButton.onclick=function()
+{
+
+setUserName();
+
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  var storedName = localStorage.getItem('name');
+ p.textContent = 'Mozilla is cool, ' + storedName;
+}
+
+function setUserName() {
+  var myName = prompt('Please enter your name.');
+  localStorage.setItem('name', myName);
+ p.textContent = 'Mozilla is cool, ' + myName;
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>
