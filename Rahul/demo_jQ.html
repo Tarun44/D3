@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<style>
+.one{
+	background-color:bisque;
+	width:98%;
+	height:30%;
+	border:1px solid gray;
+	padding:10px;
+}
+.two{
+	background-color:cornsilk;
+	width:98%;
+	height:400px;
+	margin-top:50px;
+	border:2px solid black;
+	padding:10px;
+}
+.a {
+    list-style-type: circle;
+}
+
+.b {
+    list-style-type: square;
+}
+
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+.right {
+    text-align: right;
+    margin-top: -150px;
+    margin-right: 110px;
+}
+#chng{
+	color:yellowgreen;
+
+}
+
+#oll{
+	color:green;
+}
+.image{
+	position:absolute;
+	margin-left:250px;
+	margin-top:-70px;
+
+}
+
+</style>
+</head>
+<body>
+<div class="one">
+<h1>My First CSS Example</h1>
+<p id="chng">This is a paragraph.</p>
+<p><i>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </i></p>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+ <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+ </div>
+<div class="two">
+
+	<ul class="a">
+  <li><a href="#"> Mobile </a></li>
+  <li name="Electronics-list"> <a href="#"> Laptop </a></li>
+  <li> <a href="#"> Tablet </a></li>
+</ul>
+
+<ol id="oll" type="1">
+	<li> Breakfast-Time </li>
+
+ <ul class="b">
+  <li> <a href="#"> Coffee <a href="#"></a></li>
+  <li> <a href="#">Tea </a></li>
+  <li> <a href="#"> Coca Cola </a></li>
+ </ul>
+</ol> 
+
+<form class="right">
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname"><br/><br/>
+  <label for="lname">Last Name</label>
+  <input type="text" id="lname" name="lname"> <br/> <br />
+  <label for="output">Output Res</label>
+  <input type="text" id="output" name="output">
+</form>
+<img src="image/5.jpeg" alt="not available" height="50%" width="25%" class="img-rounded image">
+</div>
+<script type="text/javascript">
+$("document").ready(function(){
+	$(".one").css("background-color","aquamarine");
+	$(".two").css("background-color","burlywood");
+	$("h1 +p").css({"color":"dodgerblue",
+				"font-size":"25px"
+		});
+	$(".one > p").css({"color":"blueviolet",
+					"font-weight":"bolder",
+					"text-align":"justify"
+					 });
+	$("#chng").html("'! Welcome to JQuery !'");
+
+	$(".a li:nth-child(1)").css("color","crimson");
+	$(".a li:nth-child(2)").css("color","blue");
+	$(".a li:nth-child(3)").css("color","green");
+
+	$("li[name]").html("<a href='#'>'Lappy'</a>");
+
+	$("#oll li").css({
+		"color":"crimson",
+		"font-weight":"bolder"
+	});
+	$(".b li").css({
+		"color":"white",
+		"font-weight":"normal"
+	});
+
+	$(".a li  a").css({
+			"text-decoration":"none",
+			"color":"crimson"
+	});
+
+	$(".b li a").css("text-decoration","none");
+	$(".b li a").css("color","white");
+
+	$(".a li a:not(:contains(Mobile))").css("color","blue");
+	$("p:has(i)").hide();
+	alert($("p:has(i)").html());
+	
+
+	$("p:has(i)").append("I go at the end !");
+	$("p:has(i)").prepend("I go at the begining !");
+	$("p:has(i)").show();
+	$("p:has(i)").before("<p id='before_p'>A new Paragraph before! </p>");
+	$("p:has(i)").after("<p id='after_p'>A new Paragraph after! </p>");
+	$("#before_p").click(function(){
+		$(this).remove();
+	});
+	$("#after_p").click(function(){
+		$(this).replaceWith('<p>I am a new Paragraph!!!!</p>')
+	});
+
+	$(".image").mouseover(function(){
+		var imgName=$(this).attr("src");
+		$(".image").attr("src","image/1.jpg");
+	});
+
+	$(".image").mouseout(function(){
+		var imgName=$(this).attr("src");
+		$(".image").attr("src","image/5.jpeg");
+		// $(".image").attr("src","image/4.jpg");
+	});
+	  $('body').click(function(){
+	  	console.log($(this))
+	 var bgcolor=$(this).css("background-color");
+	 $("input[type=text]#fname").val(bgcolor);
+	 // console.log($("input[type=text]#fname").val());
+	});
+	  $('body').focus(function(){
+	  var inputs=$("input[type=text]#lname").val());
+	  console.log($(inputs));
+	});
+	// $(".image").click(function(){
+	// 	var imgName= $(this).attr("src");
+	// 	$("input[type=text]#fname").val(imgName);
+	// });
+
+
+							});
+</script>
+
+</body>
+</html>
