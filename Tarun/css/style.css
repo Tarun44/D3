@@ -1,0 +1,60 @@
+h1{
+    position: relative;
+    left: 500px;
+}
+body {
+    width: 100% !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+    overflow-x: auto !important;
+    background-color: aliceblue !important;
+}
+
+
+
+.page
+{
+    width: 960px;
+    margin: 0px auto;
+}
+
+.list-of-posts
+{
+    min-height:700px;  
+}
+
+.pagination li
+{
+    list-style:none;  
+    float:left;
+    width : 20px;
+    height:20px;
+    border: 1px solid white;
+    background-color:blue;
+    color:white;
+    text-align:center;
+    cursor:pointer;
+}
+
+.pagination li:hover
+{
+    background-color: white;
+    border:1px solid black;
+    color: black;
+}
+
+.pagination ul
+{
+    border: 0px;
+    padding: 0px;
+}
+
+.active-class
+{
+	background-color: white !important;
+    border:1px solid black !important;
+    color: black !important;	
+}

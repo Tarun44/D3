@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+            <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <title>table</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+		<h1>/////-----TABLE-----\\\\\</h1>
+		<div class = 'table'></div>
+		<div class ='container'>
+			<table class="table table-bordered table-striped table-hover">
+			<thead>
+				<tr>
+				<th>_id</th>
+				<th>index</th>
+				<th>guid</th>
+				<th>isActive</th>
+				<th>balance</th>
+				<th>picture</th>
+				<th>age</th>
+				<th>eyecolor</th>
+				<th>name</th>
+				<th>gender</th>
+				<th>company</th>
+				<th>email</th>
+				<th>phone</th>
+				<th>address</th>
+				<th>registered</th>
+				<th>latitude</th>
+				<th>longitude</th>
+				<th>tags</th>
+				</tr>
+				</thead>
+			</table>
+
+            <div class="pagination">
+                
+            </div>
+        
+
+		</div>
+            <script>
+            	$.getJSON("data.json",function(data){
+            		var items=[];
+            		$.each(data,function(key,val){
+            			items.push("<tr class='tBTR'>");
+            			items.push("<td class='ok'"+key+"''>"+val._id+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.index+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.guid+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.isActive+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.balance+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.picture+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.age+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.eyecolor+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.name+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.gender+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.company+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.email+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.phone+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.address+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.registered+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.latitude+"</td>");
+            			items.push("<td class='ok'"+key+"''>"+val.longitude+"</td>");
+            			items.push("<td class='0k'"+key+"''>"+val.tags+"</td>");
+            			items.push("</tr>");
+            		});
+            		$("<tbody/>",{html:items.join("") }).appendTo("table");
+
+        $(".pagination").customPaginate({
+        
+            itemsToPaginate : ".tBTR",
+			
+			activeClass : "active-class"
+        
+        });
+            	});
+            </script>
+                    <script src="js/jquery.js"></script>
+        <script src="js/paginate.js"></script>
+        <script src="js/custom.js"></script>
+            </body>
+</html>
