@@ -12,30 +12,41 @@
 
 <form>
 
-<div >
-<img src="img/google.jpg" style="width=10px,height: 10px"><br>
+<div class="form-group" >
 
-First name:<input type="text" name="first name"><br>
-Last name:<input type="text" name="last name"><br>
-<input type="radio" name="gender" value="male">Male<br>
 
-<input type="radio" name="gender" value="female">Female<br>
-<h4>Course</h4>
-<input type="checkbox" name="c" value ="c">C programming<br>
+<h4>First name:</h4><input type="text" class="form-control"  placeholder="Enter First name" name="first name"><br>
+<img src="img/nature.jpg" class="img-thumbnail" style="width: 200px;height: 150px; right:00px;position: absolute; top: 00px;">
 
-<input type="checkbox" name="java" value ="java">Java<br>
+<h4>Last name:</h4><input type="text"  class="form-control"  placeholder="Enter Last name" name="last name"><br>
+<input type="radio" class="form-control" name="gender" value="male"><h4>Male</h4><br>
 
-<input type="checkbox" name="Php" value ="Php">Php<br>
+<input type="radio" class="form-control" name="gender" value="female"><h4>Female</h4><br>
+<h4 style="color: blue;">Course</h4><br>
+<input type="checkbox" class="form-control"  name="c" value ="c"><h4>C programming</h4><br>
 
-<input type="checkbox" name=".Net" value =".Net">.Net<br>
+<input type="checkbox" class="form-control" name="java" value ="java"><h4>Java</h4><br>
 
-Contact number<input type="text" name="phoneno"><br>
-Email Address:<input type="text" name="email"><br>
+<input type="checkbox"  class="form-control" name="Php" value ="Php"><h4>Php</h4><br>
 
-Password: <input type="Password" name="passwd"><br>
-Confirm password:<input type="password" name="cpasswd">
+<input type="checkbox" class="form-control" name=".Net"  value =".Net"><h4>.Net</h4>
+<br>
+
+<h4>Contact number</h4><input type="text" class="form-control" placeholder="Contact number" name="phoneno"><br>
+<h4>Email Address:</h4><input type="text" class="form-control" placeholder="Enter email"  name="email"><br>
+
+<h4>Password:</h4> <input type="Password"  class="form-control" placeholder="Enter password" name="passwd"><br>
+<h4>Confirm password:</h4><input type="password" class="form-control"  placeholder="Confirm password" name="cpasswd"><br>
+
+<h4>upload resume:</h4><input type="file" class="form-control" name="file"><br>
+
+<button type="submit" class="btn btn-primary">Submit</button>
 
 </div>
+
+
+
+
 
 </form>
 

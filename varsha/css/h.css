@@ -1,6 +1,27 @@
 div
 {
+
 position: absolute;
-	border-style: solid;
-	width: 300px;
-	right: 500px;}
+	background-color: #fff;
+    background-image: none;
+    border: 3px solid #337ab7;
+    border-radius: 4px;
+	width: 800px;
+	right: 500px;
+left: 270PX;}
+
+.form-control
+{
+	border: 1px solid #337ab7;
+	width: 47%;
+}
+
+
+input[type="radio"],[type="checkbox"]
+{
+
+	height: 22px;
+	width: 50%;
+    float: right;
+    margin-top: 11px;
+}

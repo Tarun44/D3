@@ -1,0 +1,46 @@
+
+body
+{
+    background-image: url("../img/contact1.jpg");
+}
+form.a
+{
+
+    position: absolute;
+right: 20px;
+bottom: 0px;
+}
+
+
+
+form.b
+{
+
+    position: absolute;
+left: : 20px;
+top: 200px;
+}
+
+.form-control {
+   width:94%;
+   height: 52px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #3d6c94;
+    border-color: #2e6da4;
+    width: 406px;
+}
+h3, .h3, h4, .h4, h6, .h6 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 1000px;
+}
+
+
+.navbar-inverse {
+    background-color: #0d0c10;
+    border-color: #0c0c0e;
+}
+

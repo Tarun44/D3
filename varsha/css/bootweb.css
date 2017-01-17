@@ -41,3 +41,29 @@ right:0PX;
 .navbar-inverse .navbar-brand {
     color: #080808;
 }
+
+
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: rgba(169, 68, 66, 0.67);
+
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+}
+
+
+div.d
+{
+	background-color: blue;
+}
+
+
+h3
+{
+	
+    font-weight: 400;
+    color: #6f1200
+}

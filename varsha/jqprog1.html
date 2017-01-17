@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<p id="p-one"><img src="img/pic1.jpg" id="logo1"  alt="ntt" height="180" width="180" > The burning of coal and <a href="#"> wood</a>, and the presence of many horses in
+<br> concentrated areas made the cities the cesspools of pollution. The <br>Industrial Revolution brought an infusion of untreated chemicals and wastes<br> into <em>local streams that served </em>as the water supply.<a href="#"> King Edward</a> I of England <br>banned the burning of sea-coal by proclamation in London in 1272, after its 
+<br>smoke became a problem.[4][5] But the fuel was so common in England that 
+<br>this earliest of names for it was acquired because it could be carted away
+ <br>from some shores by the wheelbarrow.
+
+It was the <a href="#"> industrial revolution</a> that gave birth to environmental <br>pollution as we know it today.<br> London also <a href="#"> recorded </a> of the earlier extreme cases of water quality problems with the Great Stink on the Thames of 1858,<br> which led to construction of the London sewerage system soon afterward.<a href="http://google.com"> Pollution </a><br>issues escalated as population growth <em>far exceeded view ability </em>of <br>neighborhoods to handle their waste problem. Reformers began to demand sewer<br> systems, and clean water.<br></p>
+<p id ="p-two">
+In 1870, the sanitary conditions in Berlin were among the worst<br >in Europe. August Bebel recalled <a href="#">conditions</a> before a modern sewer system was<br> built in the late 1870s:</p>
+
+<p id="p-three">
+
+The development of nuclear <i>science introduced radioactive contamination, which can remain lethally radioactive for hundreds of thousands of years. </i>Lake Karachay, named by the Worldwatch Institute as the "most polluted spot" on earth, served as a disposal site for the Soviet Union throughout the 1950s and 1960s. Second place may go to[weasel words] the area of Chelyabinsk, Russia, as the "Most polluted place on the planet".</p>
+
+
+<div id="order">
+
+<div id="lorder">
+  <li>Coffee and</li>
+  <li>Tea and</li>
+  <li name="best milk">Milk</li>
+</ol>
+
+
+</div>
+
+
+<input id="name" type="text" value="">
+<input id="lorder" type="text" value="" >
+<table border="1"  id="table">
+	
+<tr>
+<td>monday</td>
+<td>sunday</td>
+<td>friday</td>
+</tr>
+
+<tr>
+<td>monday</td>
+<td>sunday</td>
+<td>friday</td>
+</tr>
+
+<tr>
+<td>monday</td>
+<td>sunday</td>
+<td>friday</td>
+</tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+	
+$("document").ready(function()
+{
+
+$("#wrapper"). css("width",500);
+$("#wrapper").css("margin","auto");
+
+$("#wrapper").css("color","purple");
+
+$("a").css("color","red");
+
+$("#p-two a").css("color","green");
+
+$("em+a").css("color","yellow");
+
+$("p > em").css("color","pink");
+$("#p-one em").css("color","orange");
+
+
+
+$("#order  li:nth-child(3)").css("color","pink");
+
+$("li[name]").html("'best milk'");
+
+$("input[type='text']#name").val("varsha");
+
+$("a[href*='google']").css("font-weight","bolder");
+
+
+$("img[alt^='ntt']").css({
+"border-color":"black",
+"border-width":"3px",
+"border-style":"solid"
+});
+
+$("a[href^='http://g']").css("color","pink");
+$("img[alt^='ntt']").css(
+{
+"width":150,
+"height":150
+
+});
+
+$("#table tr:even").css("background-color","pink");
+$("#table tr:odd").css("background-color","orange");
+
+
+$("table tr:first").css("color","blue");
+
+$("table tr:nth-child(2)").css("color","blue");
+
+$("#order li:not(:contains(and))").css("color","red");
+
+$("a:contains(recorded)").css("color","orange");
+console.log($("p:has(i)"));
+$("p:has(i)").hide();
+$("p:has(i)").html("<i>some normal text</i>").show();
+
+$("p:has(i)").append("I go");
+$("p:has(i)").prepend("you go");
+
+$("p:has(i)").before("<p id='a'>fghkhlhglnhgln</p>");
+$("p:has(i)").after("<p id='b'> ghjhjh</p");
+
+$("#a").click(function()
+{
+
+	$(this).remove();
+});
+
+$("#b").click(function()
+{
+
+	$(this).replaceWith("<p>jdfjvdfijfdij</p>");
+});
+
+
+ $("#order li").each(function(index) {
+ 
+    // Get the value in the input element
+    var inputListStuff = $("#lorder").val();
+ 
+    // Assign a new value to the input element
+    // $(this).text() gets the value for each individual
+    // li element
+    $("#lorder").val(inputListStuff + ", " + $(this).text());
+ 
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<script src="bootstrap/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/h.css">
+
+</head>
+<body>
+
+<form>
+
+<div class="form-group" >
+
+
+<h4>First name:</h4><input type="text" class="form-control" id="name" placeholder="Enter First name" name="first name"><br>
+<img src="img/nature.jpg" class="img-thumbnail" style="width: 200px;height: 150px; right:00px;position: absolute; top: 00px;">
+
+<h4>Last name:</h4><input type="text"  class="form-control"  id="lname" placeholder="Enter Last name" name="last name"><br>
+<input type="radio" class="form-control" id="mgender" name="gender" value="male"><h4>Male</h4><br>
+
+<input type="radio" class="form-control" id="fgender" name="gender" value="female"><h4>Female</h4><br>
+<h4 style="color: blue;">Course</h4><br>
+<input type="checkbox" class="form-control" id="c" name="c" value ="c"><h4>C programming</h4><br>
+
+<input type="checkbox" class="form-control" id="java" name="java" value ="java"><h4>Java</h4><br>
+
+<input type="checkbox"  class="form-control" id="Php" name="Php" value ="Php"><h4>Php</h4><br>
+
+<input type="checkbox" class="form-control" id=".Net" name=".Net"  value =".Net"><h4>.Net</h4>
+<br>
+
+<h4>Contact number</h4><input type="text"  class="form-control" id="pno" placeholder="Contact number" name="phoneno"><br>
+<h4>Email Address:</h4><input type="text" class="form-control" id="email" placeholder="Enter email"  name="email"><br>
+
+<h4>Password:</h4> <input type="Password"  class="form-control"  placeholder="Enter password" name="passwd"><br>
+<h4>Confirm password:</h4><input type="password" class="form-control"  placeholder="Confirm password" name="cpasswd"><br>
+
+<h4>upload resume:</h4><input type="file" class="form-control" name="file"><br>
+
+<button type="submit" onclick="record()" class="btn btn-primary">Submit</button>
+
+</div>
+</form>
+
+
+<script type="text/javascript">
+	function record()
+	{
+var n=document.getElementById("name").value;
+var ln=document.getElementById("lname").value;
+var male=document.getElementById("mgender").value;
+var female=document.getElementById("fgender").value;
+
+
+document.write("Name:"+n+" "+ln);
+if((male==male)&&(female==""))
+{
+	document.write("Gender: "+Male);
+	else
+		document.write("Gender: "+Female);
+}
+
+
+
+
+
+}
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
