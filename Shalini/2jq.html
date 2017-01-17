@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+  	$(document).ready(function(){
+  		var textBoxes= $('input[type="text"]');
+        textBoxes.focus(function(){
+        	var helpDiv= $(this).attr('id') + 'Helpdiv';
+        	$('#' + helpDiv).load('help.html');
+
+        });
+        textBoxes.blur(function(){
+        	var helpDiv= $(this).attr('id') + 'Helpdiv';
+        	$('#' + helpDiv).html('');
+        });
+  	});
+  	</script>
+  	</head>
+  <body style="font-family: Arial;">
+  <table>
+  	<tr>
+  		<td>First Name</td>
+  		<td><input type="text" id="firstName"/></td>
+  		<td><div id="firstNameHelpDiv"></div></td>
+  	</tr>
+  	<tr>
+  		<td>Last Name</td>
+  		<td><input id="lastName" type="text"/></td>
+  		<td><div id="lastNameHelpDiv"></div></td>
+  	</tr>
+  	<tr>
+  	<td>Email</td>
+  	<td><input id="email" type="text"/></td>
+  	<td><div id="emailHelpDiv"></div></td>
+  	</tr>
+  	<tr>
+  	<td>Income</td>
+  	<td><input id="income" type="text"/></td>
+  	<td><div id="incomeHelpDiv"></div></td>
+  	</tr>
+  </table>
+  </body>
+  </html>

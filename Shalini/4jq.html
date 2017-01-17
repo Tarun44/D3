@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table for HTML</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+	
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+	
+	<script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		
+	$("#mytable").Datatable();
+	});
+
+
+	</script>
+
+</head>
+
+<body>
+<table id="mytable" class="display">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Position</th>
+			<th>Office</th>
+			<th>Age</th>
+			<th>Start date</th>
+			<th>Salary</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr>
+			<td>Afnam Yousuf</td>
+			<td>Faculty</td>
+			<td>SFC Karachi</td>
+			<td>27</td>
+			<td>2013/03/01</td>
+		</tr>
+		<tr>
+			<td>Tahir Azizi</td>
+			<td>Senior Faculty</td>
+			<td>SFC Karachi</td>
+			<td>30</td>
+			<td>2015/05/21</td>
+			<td>35000</td>
+		</tr>
+		    <td>Ali Khan</td>
+		    <td>Junior Faculty</td>
+		    <td>SFC Karachi</td>
+		    <td>22</td>
+		    <td>2015/05/21</td>
+		    <td>20000</td>
+		</tr>
+		<tr>
+			<td>Malik Maveed</td>
+			<td>Junior Faculty</td>
+			<td>Metro Karachi</td>
+			<td>20</td>
+			<td>2015/05/21</td>
+			<td>15000</td>
+		</tr>
+	</tbody>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+	$.getJSON("data.json",function(data){
+		var items[];
+			$.each(data,function(key,val){
+				items.push("<tr>");
+
+
+			}
+		}
+	}
+</script>
+</body>
+</html>

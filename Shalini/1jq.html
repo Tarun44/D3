@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style type="text/css">
+  highlight { background-color: yellow; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+<h1>Lorem Ipsum</h1>
+<p id="p_one"><img src="img/ntt-logo.png" id="logo" alt="Ntt Logo" height="180" width="180">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <em>Aenean pretium</em>, ipsum quis ultrices aliquet, lacus urna ultrices odio, eu interdum tortor tortor quis ligula. <a href="#">Morbi finibus</a> auctor ipsum vel tempus. Nullam gravida leo ac iaculis pretium. <b>In pretium varius nisi</b>, quis tristique ipsum semper vitae. Mauris eu aliquet odio. Pellentesque tristique sem turpis, id gravida nunc consequat vel. <a href="#">Nullam nec condimentum magna</a>. Sed dignissim interdum risus ac mattis. In hac habitasse platea dictumst. Vivamus placerat tristique vestibulum. Pellentesque quis eleifend nisl. Quisque mollis aliquam enim eu ullamcorper.</p>
+<p id="p_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium, ipsum quis ultrices aliquet, lacus urna ultrices odio, eu interdum tortor tortor quis ligula. <a href="mailto:derekbanas@verizon.net">Morbi finibus</a> auctor ipsum vel tempus. Nullam gravida leo ac iaculis pretium. In pretium varius nisi, quis tristique ipsum semper vitae. Mauris eu aliquet odio. Pellentesque tristique sem turpis, id <a href="http://google.com">gravida nunc consequat</a> vel. Nullam nec condimentum magna. Sed dignissim interdum risus ac mattis. <a href="http://www.newthinktank.com/wordpress/PersonalityTest.pdf">In hac habitasse</a> platea dictumst. Vivamus placerat tristique vestibulum. Pellentesque quis eleifend nisl. Quisque mollis aliquam enim eu ullamcorper.</p>
+ 
+<p id="p_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <i>Aenean pretium,</i> ipsum quis ultrices aliquet, lacus urna ultrices odio, eu interdum tortor tortor quis ligula.</p>
+
+<table id="tableData">
+<caption>Cricket</caption>
+<thead>
+<tr>
+<td colspan="4">Best Cricket Players</td>
+</tr>
+</thead>
+<tfoot>
+<tr><td colspan="4">* Hall of Fame</td></tr>
+</tfoot>
+<tbody>
+<tr>
+<td></td>
+<td>Average</td>
+<td>RBIs</td>
+<td>Homeruns</td>
+</tr>
+<tr>
+<td><a href="#">MS Dhoni*</a></td>
+<td>.305</td>
+<td>2297</td>
+<td>755</td>
+</tr>
+<tr>
+<td><a href="#">Virat Kohli*</a></td>
+<td>.342</td>
+<td>2214</td>
+<td>714</td>
+</tr>
+<tr>
+<td><a href="#">Yuvraj Singh</a></td>
+<td>.298</td>
+<td>1996</td>
+<td>762</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bestSelling">Best selling childrens books</h2>
+ 
+<ol id="oListTypes">
+<li>Harry Potter
+<ol id="oListIndent">
+<li>and the Sorcerer's Stone</li>
+<li>and the Half-Blood Prince</li>
+<li>and the Chamber of Secrets</li>
+<li>Prisoner of Azkaban</li>
+<li name="best_book">and the Goblet of Fire</li>
+<li>and the Order of the Phoenix</li>
+<li>and the Deathly Hallows</li>
+</ol>
+</li>
+<li>The Very Hungry Caterpillar</li>
+</ol>
+<input type="text" id="yourName" size="50">
+ 
+<input type="text" id="listStuff" size="50"><br />
+ 
+<h2 id="trackEvents">Tracking Events</h2>
+ 
+Mouse Click : X : <input type="text" id="mClickXPos">
+Y : <input type="text" id="mClickYPos"><br />
+
+Mouse Move : X : <input type="text" id="mMoveXPos">
+Y : <input type="text" id="mMoveYPos"><br />
+ 
+Key Pressed : <input type="text" id="keyPressed"><br />
+ 
+<span id="formEvent">Form Event</span> : <input type="text" id="inputFormEvent"><br /><br />
+ 
+ <script type="text/javascript">
+ $("document").ready(function() {
+ 	$("#wrapper").css("width",1000);
+ 	$("#wrapper").css("margin","auto");
+ 	$("#logo").css("float","right");
+ 	$("#p_two").css("color","green");
+ 	$("#p_one").css("font-family","cursive");
+ 	$("#p_three").css("font-size",20);
+
+ 	$("a").css("color", "red");
+
+ 	$("#tableData a").css("color", "blue")
+
+ 	$("em + a").css("color", "orange");
+ 
+   $("p > em").css("color", "purple");
+
+    $("#oListIndent").css("color", "brown");
+     $("li[name]").html("'and the Goblet of Fire'");
+
+     $("input[type='text']#yourName").val("Shalini");
+
+     $("a[href*='google']").css("font-weight", "bolder");
+ 
+ $("img[alt^='NTT']").css({"border-color": "black", "border-width":"2px", "border-style":"solid"});
+     alert(1);
+ })
+ 	</script>
+ 	</div>
+ 	</body>
+ 	</html>
