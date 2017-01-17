@@ -1,0 +1,24 @@
+{
+	"r1":{
+		"name":"Rahul",
+		"age":25,
+		"company":"MIcrosoft"
+	     },
+	"r2":{
+		"name":"Devansh",
+		"age":29,
+		"company":"Tech Mahindra"
+	     },
+	"r3":{
+		"name":"Salman",
+		"age":27,
+		"company":"Oracle"
+	     },
+	"r4":{
+		"name":"Lalit",
+		"age":24,
+		"company":"Ahex"
+	     }
+	
+
+}

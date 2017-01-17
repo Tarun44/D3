@@ -54,11 +54,16 @@ p {
 #oll{
 	color:green;
 }
-.image{
+/*.image{
 	position:absolute;
-	margin-left:250px;
-	margin-top:-70px;
+	margin-left:300px;
+	margin-top:-430px;
 
+}*/
+.three{
+	width:100%;
+	height:auto;
+	background-color:darkmagenta;
 }
 
 </style>
@@ -73,6 +78,7 @@ p {
  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
  </div>
+
 <div class="two">
 
 	<ul class="a">
@@ -97,8 +103,40 @@ p {
   <label for="lname">Last Name</label>
   <input type="text" id="lname" name="lname"> <br/> <br />
   <label for="output">Output Res</label>
-  <input type="text" id="output" name="output">
+  <input type="text" id="output" name="output"><br/><br/>
+  TextBox : <input type="textbox" placeholder="Type something"></input><br/>
+  <button id="get_d">Get Data</button>
 </form>
+</div>
+<div class="three">
+  <form action="">
+<!-- Text -->
+
+<label>Input :</label><br/>
+<input type="text" id="text" name="name" value="" /><br/>
+<input type="button" id="text_value" value="Get Value"/><br/>
+<input type="button" id="text_reset" value=" Reset "/><br/>
+
+<!-- Radio Button -->
+
+<label>Radio Button :</label><br/>
+<input type="radio" name="radio" value="Radio 1">Radio 1
+<input type="radio" name="radio" value="Radio 2">Radio 2
+<input type="radio" name="radio" value="Radio 3">Radio 3
+<input type="radio" name="radio" value="Radio 4">Radio 4
+<input type="button" id="radio_value" value="Get Value"/><br/>
+<input type="button" id="radio_reset" value=" Reset "/><br/>
+<p id="result"></p>
+<!-- Textarea -->
+
+<label>Textarea :</label><br/>
+<textarea id="textarea" ></textarea><br/>
+<input type="button" id="textarea_value" value="Get Value"/><br/>
+<input type="button" id="textarea_reset" value=" Reset "/><br/>
+</form>
+</div>
+
+
 <img src="image/5.jpeg" alt="not available" height="50%" width="25%" class="img-rounded image">
 </div>
 <script type="text/javascript">
@@ -164,22 +202,80 @@ $("document").ready(function(){
 		$(".image").attr("src","image/5.jpeg");
 		// $(".image").attr("src","image/4.jpg");
 	});
-	  $('body').click(function(){
-	  	console.log($(this))
-	 var bgcolor=$(this).css("background-color");
-	 $("input[type=text]#fname").val(bgcolor);
+	 //  $('body').click(function(){
+	 //  	console.log($(this))
+	 // var bgcolor=$(this).css("background-color");
+	 // $("input[type=text]#fname").val(bgcolor);
 	 // console.log($("input[type=text]#fname").val());
-	});
-	  $('body').focus(function(){
-	  var inputs=$("input[type=text]#lname").val());
-	  console.log($(inputs));
-	});
-	// $(".image").click(function(){
+	//});
+	 
+	// $("#lname").keyup(function(){
+ //            console.log($(this).val());
+ //        });
+
+	// $(".image").click(function(){ 
 	// 	var imgName= $(this).attr("src");
 	// 	$("input[type=text]#fname").val(imgName);
 	// });
 
+	// var r=$('#fname').html($('input:text').val());
+	// console.log(r);
 
+// Function to get input value.	
+$('#text_value').click(function() {
+var text_value = $("#text").val();
+if(text_value=='') {
+alert("Enter Some Text In Input Field");
+}else{
+alert(text_value);
+}
+});
+
+$('#text_reset').click(function() {
+$("#text").val('');
+});
+
+// Funtion to get checked radio's value.
+$('#radio_value').click(function() {
+$('#result').empty();
+var value = $("form input[type='radio']:checked").val();
+if($("form input[type='radio']").is(':checked')) {
+$('#result').append("Checked Radio Button Value is :<span> "+ value +" </span>");
+}else{
+alert(" Please Select any Option ");
+}
+});
+// Get value Onchange radio function.
+$('input:radio').change(function(){
+var value = $("form input[type='radio']:checked").val();
+alert("Value of Changed Radio is : " +value);
+});
+
+// Funtion to reset or clear selection.
+$('#radio_reset').click(function() {
+$('#result').empty();
+$("input:radio").attr("checked", "false");
+});
+// To get value of textarea.
+$('#textarea_value').click(function() {
+var textarea_value = $("#textarea").val();
+if(textarea_value=='') {
+alert("Enter Some Text In Textarea");
+}else{
+alert(textarea_value);
+}
+});
+$('#textarea_reset').click(function() {
+$("textarea").val('');
+});
+$('#get_d').click(function(){
+	var z=$("#fname").val();
+	if(z==''){
+		alert("Enter some data");
+	}else{
+		$("input[type=text]#output").val(z);
+	}
+});
 							});
 </script>
 
