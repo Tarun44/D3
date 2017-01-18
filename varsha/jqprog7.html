@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+	
+</head>
+<body>
+
+<div id="a" style="background-color: yellow;">click</div>
+<div  id="b"  style="display: none;background-color: pink;">get lost</div>
+
+<div id="c" style="width: 100px;height: 100px;background-color: pink;position: absolute;"></div>
+
+<button id="zoomout" style="position: absolute;bottom: 50px;"> zoomout</button>
+<button id="zoomin" style="position: absolute;bottom: 50px;left: 100px;" > zoomin</button>
+<script>
+$(document).ready(function()
+{
+
+$("#a").click(function()
+{
+$("#b").slideDown();
+});
+
+
+});
+
+
+$(document).ready(function()
+{
+	$("#zoomout").click(function()
+	{
+$("#c").animate({right:'+=10px',
+	
+		width:'-=10px',
+		height:'-=10px'
+	});
+	});
+
+$("#zoomin").click(function()
+	{
+$("#c").animate({left:'+=10px',
+	
+		width:'+=10px',
+		height:'+=10px'
+	});
+	});
+
+});
+
+</script>
+
+</body>
+</html>
