@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	
+</head>
+<body>
+
+<p>please</p>
+<p class="a">come</p>
+<p>back</p>
+<h1>hello</h1>
+
+<button>click</button>
+
+
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<script>
+
+$(document).ready(function()
+{
+	$("p.a").mousedown(function()
+	{
+		alert("mouseenter");
+	});
+
+});
+
+
+
+$(document).ready(function(){
+    $("p").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+        }, 
+        click: function(){
+            $(this).css("background-color", "yellow");
+        }  
+    });
+});
+
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p.a").hide();
+    });
+    $("#show").click(function(){
+        $("p.a").show();
+    });
+});
+
+</script>
+
+</body>
+</html>
