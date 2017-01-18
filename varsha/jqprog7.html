@@ -19,14 +19,21 @@
 
 <button id="zoomout" style="position: absolute;bottom: 50px;"> zoomout</button>
 <button id="zoomin" style="position: absolute;bottom: 50px;left: 100px;" > zoomin</button>
+<button id="e" style="position: absolute;bottom: 50px;left: 200px;">stop</button>
 <script>
 $(document).ready(function()
 {
 
 $("#a").click(function()
 {
-$("#b").slideDown();
+$("#b").slideDown(3000);
 });
+
+$("#e").click(function()
+{
+$("#b").stop();
+});
+
 
 
 });
