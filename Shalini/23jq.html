@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datatable</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
+
+</head>
+<body>
+	<p><br/><br/></p>
+	<div class="container">
+	<table class="table table-bordered table-striped table-hover">
+	<thead>
+		<tr>
+			<th>name</th>
+			<th>age</th>
+		    <th>company</th>
+		</tr>
+		</thead>
+	</table>
+	</div>
+	
+	<script type="text/javascript">
+		$.getJSON("data.json",function(data){
+			var items = [];
+			$.each(data, function(key,val){
+				items.push("<tr>");
+				items.push("<td id=''"+key+"''>"+val.name+"</td>");
+				items.push("<td id=''"+key+"''>"+val.age+"</td>");
+				items.push("<td id=''"+key+"''>"+val.company +"</td>");
+				items.push("</tr>");
+
+			});
+			$("<tbody/>", {html: items.join(**)}).appendTo("table");
+		});
+	
+	</script>
+	</body>
+	</html>

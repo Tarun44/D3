@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("p").on({
+        mouseenter: function(){
+            $(this).css("background-color", "powderblue");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "limegreen");
+        }, 
+        click: function(){
+            $(this).css("background-color", "orange");
+        }  
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley <br>of type and scrambled it to make a type specimen book. It has survived not only five centuries, <br>but also the leap into electronic typesetting, remaining essentially unchanged</p>
+
+</body>
+</html>

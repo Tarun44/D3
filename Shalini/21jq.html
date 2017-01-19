@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Descendent Selectors</title>
+	<link rel="stylesheet" type="text/css" href="style5.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="main">
+	<div class="sub">
+		<p>Ahex Technologies</p>
+	</div>
+	</div>
+	<button id="main_div">Main Div</button>
+	<button id="sub_div">Sub Div</button>
+	<button id="sub_div_para">Sub Div Paragraph</button>
+
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#main_div").click(function(){
+			$("#main").css("background-color", "black");
+		});
+
+$("#sub_div").click(function(){
+$("div div").css("background-color", "yellow");
+});
+
+$("#sub_div_para").click(function(){
+$("div div p").css("background-color", "yellow");
+
+});
+
+});
+</script>

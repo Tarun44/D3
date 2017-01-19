@@ -1,0 +1,38 @@
+<html>
+ <head><title>jQuery Methods and CSS!</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <style type="text/css">
+   .highlight{
+     background-color: lightgreen;
+     width: 100px;
+   }
+  </style>
+ </head>
+ <body>
+         <ol>
+          <li class="veg">Rice</li>
+          <li class="non_veg">Chicken</li>
+          <li class="veg">Veg Pizza</li>
+          <li class="non_veg">Fish</li>
+          <li class="veg">Fruits and Juice!</li>
+         </ol>
+         <br />
+ 
+         <button id="select_veg">Vegitarian</button>
+         <button id="restore_menu">Restore</button>
+ 
+ </body>
+</html>
+<script type="text/javascript">
+  $(document).ready( function() {
+ 
+ $("#select_veg").click( function() {
+    $("li.veg").addClass("highlight");
+ });
+ 
+ $("#restore_menu").click( function() {
+    $("li.veg").removeClass("highlight");
+ });
+ 
+ });
+</script>
