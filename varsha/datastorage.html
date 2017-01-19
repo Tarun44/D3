@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html storage</title>
+</head>
+<body>
+
+
+
+<<table id="myTable">
+  <tr>
+    <td>name</td>
+    <td>id</td>
+  </tr>
+  
+</table>
+
+
+Name<input type="text" id="a" name="fname">
+id<input type="text" id="b" name="id">
+
+<button onclick="myFunction()">Try it</button>
+
+
+<script>
+
+
+
+function data() {
+var name=document.getElementById("a").value
+var id=document.getElementById("b").value
+
+
+    var table = document.getElementById("myTable");
+    var rowCount = table.rows.length;
+    var row = table.insertRow(rowCount);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = name;
+    cell2.innerHTML = id;
+    
+}
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

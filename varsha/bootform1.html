@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<script src="bootstrap/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/formcss.css">
+	
+</head>
+<body>
+
+<nav style="top:0px; " class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><img src="img/ahex.png" style="display: inline-block;width: 50px;height: 50px;position: relative; top:-15px;"></a>
+    </div>
+    <ul class="nav navbar-nav ">
+      <li ><a href="bootstrapwebsite.html">Home</a></li>
+      <li><a href="#">Places</a></li>
+      <li><a href="imagegallery.html">Gallery</a></li>
+      <li><a href="#">Holiday Packages</a></li>
+</ul>
+
+      <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="bootform.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+
+    
+  </div>
+</nav>
+
+
+<form class="a">
+
+<div class="form-group" >
+
+<input type="text" class="form-control"  id="a" placeholder="Enter First name" name="first name"><br>
+
+<input type="text" class="form-control" id="b" placeholder="Enter Last name" name="last name"><br>
+<input type="text" class="form-control" placeholder="Enter email"  name="email"><br>
+<!-- <input type="area" class="form-control" placeholder="about yourself"  name="aboutyour"><br> -->
+<textarea rows="6" cols="55" class="form-control" id="c" placeholder="About yourself" name="aboutyour"></textarea><br>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+
+</div>
+</form>
+
+
+<table id="mytable" border="2" cellpadding="2" cellspacing="2">
+  <tr>
+  <td>First Name</td>
+  <td>Last Name</td>
+  <td>About yourself</td>
+
+</table>
+
+
+<script>
+
+
+
+function myfunction()
+{
+  var name=document.getElementById("a").value;
+  var id=document.getElementById("b").value;
+
+  var table=document.getElementById("mytable");
+
+  var rowCount=table.rows.length;
+  var row=table.insertRow(rowCount);
+  row.insertCell(0).innerHTML= name;
+  row.insertCell(1).innerHTML= id;
+  
+} 
+
+
+
+$(document).ready(function()
+{
+  $("#mytable").hide();
+  $("#CLICK").click(function()
+  {
+    $("#mytable").show();
+  });
+
+
+});
+
+
+  </script>
+
+</body>
+</html>

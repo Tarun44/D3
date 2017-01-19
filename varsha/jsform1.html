@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FORM</title>
+<link rel="stylesheet"  >
+<script type="text/javascript" src="formvalid.js"></script>
+</head>
+	<body>
+		
+		<hr>
+		<form action="#" name="myForm">
+		<center>
+		<table class="a" border="2"  >
+			<tr><th>FIRST NAME:</th>
+		<td><input type="text" name="firstname" id="fn"></td></tr>
+		<tr><th>LASTNAME:</th>
+		<td><input type="text" name="lastname" id="ln"></td></tr>
+		<tr><th>EMAIL:</th>
+		<td><input type="email" name="email" id="em"></td></tr>
+		
+		</table>
+		<br>
+		<input type="submit" value= "submit" onclick="myFunction()"/>
+		<input type="reset">
+		</center>
+		</form>
+		
+		<input type="button" value="Generate Table" onclick="myFunction()" />
+
+<hr>
+ 
+ <table id="tabdata"  border="5" cellpadding="5" cellspacing="3">
+   <tr>
+    <td>&nbsp;</td>
+    <td><b>firstname</b></td>
+    <td><b>lastname</b></td>
+    <td><b>email</b></td>
+    
+   
+   </tr>
+  </table>
+
+	</body>
+</html>

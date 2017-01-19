@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<style>
+		table,td {
+
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+
+
+<table id="mytable" cellpadding="4" cellspacing="4">
+	<tr>
+	<td>Name</td>
+	<td>Id</td>
+	</tr>
+</table>
+<button id="CLICK">show</button>
+
+<br>
+<center>
+Name<input type="text" id="a" name="fname"><br>
+Id<input type="text" id="b" name="id">
+
+<button onclick="myfunction()">try it</button>
+
+</center>
+
+<script>
+
+
+
+function myfunction()
+{
+	var name=document.getElementById("a").value;
+	var id=document.getElementById("b").value;
+
+	var table=document.getElementById("mytable");
+
+	var rowCount=table.rows.length;
+	var row=table.insertRow(rowCount);
+	row.insertCell(0).innerHTML= name;
+	row.insertCell(1).innerHTML= id;
+	
+}	
+
+
+
+$(document).ready(function()
+{
+	$("#mytable").hide();
+	$("#CLICK").click(function()
+	{
+		$("#mytable").toggle();
+	});
+
+
+});
+
+
+	</script>
+	</body>
+	</html>
+
