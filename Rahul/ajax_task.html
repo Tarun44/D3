@@ -57,32 +57,41 @@
 $.getJSON("data.json",function(data){
   var items = [];
   $.each(data,function(key,value){
-    items.push("<tr>");
-    items.push("<td id='id_"+key+"'>"+value._id+"</td>");
-    items.push("<td id='index_"+key+"'>"+value.index+"</td>");
-    items.push("<td id='guid_"+key+"'>"+value.guid+"</td>");
-    items.push("<td id='isActive_"+key+"'>"+value.isActive+"</td>");
-    items.push("<td id='balance_"+key+"'>"+value.balance+"</td>");
-    items.push("<td id='picture_"+key+"'>"+value.picture+"</td>");
-    items.push("<td id=age_"+key+"'>"+value.age+"</td>");
-    items.push("<td id='eyeColor_"+key+"'>"+value.eyeColor+"</td>");
-    items.push("<td id='name_"+key+"'>"+value.name+"</td>");
-    items.push("<td id='gender_"+key+"'>"+value.gender+"</td>");
-    items.push("<td id='company_"+key+"'>"+value.company+"</td>");
-    items.push("<td id='email"+key+"'>"+value.email+"</td>");
-    items.push("<td id='phone_"+key+"'>"+value.phone+"</td>");
-    items.push("<td id='address_"+key+"'>"+value.address+"</td>");
-    items.push("<td id='about_"+key+"'>"+value.about+"</td>");
-    items.push("<td id='registered_"+key+"'>"+value.registered+"</td>");
-    items.push("<td id='latitude_"+key+"'>"+value.latitude+"</td>");
-    items.push("<td id='longitude_"+key+"'>"+value.longitude+"</td>");
-    items.push("<td id='tags_"+key+"'>"+value.tags+"</td>");
-    items.push("<td id='friends_"+key+"'>"+value.friends+"</td>");
-    items.push("<td id='greeting_"+key+"'>"+value.greeting+"</td>");
-    items.push("<td id='favoriteFruit_"+key+"'>"+value.favoriteFruit+"</td>");
+
+    items.push("<tr>");   
+    items.push("<td>"+value._id+"</td>");
+    items.push("<td>"+value.index+"</td>");
+    items.push("<td>"+value.guid+"</td>");
+    items.push("<td>"+value.isActive+"</td>");
+    items.push("<td>"+value.balance+"</td>");
+    items.push("<td>"+value.picture+"</td>");
+    items.push("<td>"+value.age+"</td>");
+    items.push("<td>"+value.eyeColor+"</td>");
+    items.push("<td>"+value.name+"</td>");
+    items.push("<td>"+value.gender+"</td>");
+    items.push("<td>"+value.company+"</td>");
+    items.push("<td>"+value.email+"</td>");
+    items.push("<td>"+value.phone+"</td>");
+    items.push("<td>"+value.address+"</td>");
+    items.push("<td>"+value.about+"</td>");
+    items.push("<td>"+value.registered+"</td>");
+    items.push("<td>"+value.latitude+"</td>");
+    items.push("<td>"+value.longitude+"</td>");
+    items.push("<td>"+value.tags+"</td>");
+    var friends=[];
+    // items.push("<td>"+value.friends[0].name+"</td>");
+      
+      //console.log(friends);
+      $.each(value.friends,function(k,v){         
+     friends.push(v.name);
+      });
+      
+    items.push("<td>"+(friends.join(","))+"</td>");
+    items.push("<td>"+value.greeting+"</td>");
+    items.push("<td>"+value.favoriteFruit+"</td>");
     items.push("</tr>");
   });
-   $("<tbody/>",{html:items.join("")}).appendTo("table");
+   $("<tbody/>",{html:items.join("|")}).appendTo("table");
 });
 $(document).ready(function(){
    $('#MYTABLE').DataTable();
