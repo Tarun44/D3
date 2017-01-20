@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+<button id="mybutn">click</button>
+<p id="demo" value=""></p>
+<script>
+var d=new Date();
+$(document).ready(function()
+{
+	$("#mybutn").click(function()
+	{
+		 console.log(d.getDate());
+		$("#demo").text(Date());
+	});
+});
+
+
+</script>
+</body>
+</html>
