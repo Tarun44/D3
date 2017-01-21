@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>When method of deferred</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+	<h1 class="text-success text-center"> Uses of When Method of deferred Call </h1>
+<script>
+
+	var dfd1 = $.ajax({
+    ulr:"https://api.myjson.com/bins/1bcwh3",
+    context:document.body, 
+});
+	
+	var dfd2 = $.ajax({
+    ulr:"https://api.myjson.com/bins/13oerr",
+    context:document.body, 
+});
+
+
+$.when(dfd1,dfd2).then( 	
+function(v){ 
+       console.log(dfd1); 
+       console.log(v);
+	 $('body').append('<p> Ajax success with deferred !</p>')
+},
+function(){
+ $('body').append('<p> Ajax fails with deferred ! </p>')
+} 
+);
+
+	</script>
+</body>
+</html>
+
