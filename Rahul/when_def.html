@@ -14,35 +14,93 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<!--JS for Datatables -->
+<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
+
+     <!--CSS for Datatables -->
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 
 </head>
 <body>
-	<h1 class="text-success text-center"> Uses of When Method of deferred Call </h1>
+	<div class="container">
+	<h1 class="text-danger text-center"> Combining two data from two different URL & populating them into an Single HTML Table </h1>
+	<table class="table table-striped table-bordered table-hover"  id="MYTABLE">
+
+	</table>	
 <script>
 
-	var dfd1 = $.ajax({
-    ulr:"https://api.myjson.com/bins/1bcwh3",
-    context:document.body, 
-});
+// 	var dfd1 = $.ajax({
+//     ulr:"https://api.myjson.com/bins/1bcwh3",
+//     context:document.body, 
+// });                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 	
-	var dfd2 = $.ajax({
-    ulr:"https://api.myjson.com/bins/13oerr",
-    context:document.body, 
-});
+// 	var dfd2 = $.ajax({
+//     ulr:"https://api.myjson.com/bins/13oerr",
+//     context:document.body, 
+// });
 
 
-$.when(dfd1,dfd2).then( 	
-function(v){ 
-       console.log(dfd1); 
-       console.log(v);
-	 $('body').append('<p> Ajax success with deferred !</p>')
-},
-function(){
- $('body').append('<p> Ajax fails with deferred ! </p>')
-} 
-);
+// $.when(dfd1,dfd2).then( 	
+// function(v){ 
+//        console.log(dfd1); 
+//        console.log(v);
+// 	 $('body').append('<p> Ajax success with deferred !</p>')
+// },
+// function(){
+//  $('body').append('<p> Ajax fails with deferred ! </p>')
+// } 
+// );
+window.onload =function(){
+$.get("https://api.myjson.com/bins/1bcwh3").then(function(data){
+	 var keys= (Object.keys(data));
+	 // console.log(keys);
+	 // console.log(Object.values(data));
+	  var Hcontent = [];
+	  var content = [];
+	 
+	  Hcontent.push("<tr>")	
+	   $.each(keys,function(k,v){
+				Hcontent.push("<th>"+v+"</th>");
+
+			});
+	    content.push("</tr>")	
+
+	   // var keys=Object.keys(data);
+	   // console.log(keys());
+	  	content.push("<tr>");	
+	 $.each(data,function(key,value){
+	 
+	 		content.push("<td>"+value+"</td>");
+	 	
+	 })
+	
+	
+	 return $.get("https://api.myjson.com/bins/13oerr").then(function(data1){
+	
+	 var keys1= (Object.keys(data1)); 
+	   // content.push("<tr>")	
+	 $.each(keys1,function(k,v){
+	 Hcontent.push("<th>"+v+"</th>");
+			                 });	
+     Hcontent.push("</tr>");
+
+	 $.each(data1,function(key,value){
+	 content.push("<td>"+value+"</td>");	
+	                         });
+
+	 content.push("</tr>");
+	 	console.log(data1);
+	 	 $('<thead>',{html:Hcontent.join('')}).appendTo("table");
+	 	 $('<tbody>',{html:content.join('')}).appendTo("table");
+	 	  $('#MYTABLE').DataTable();
+	 })
+})
+}
+
+
 
 	</script>
+</div>
 </body>
 </html>
 

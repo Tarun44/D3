@@ -59,8 +59,9 @@ $.ajax({
       });
       items.push("</tr>");   
       // var Dynamic_table ='<h1>JQuery Ajax Tutorials</h1>';
-       $("<tbody/>",{html:items.join("")}).appendTo("table");
+      
     });
+       $("<tbody/>",{html:items.join("")}).appendTo("table");
  })
   // Code to run if the request fails; the raw request and
   // status codes are passed to the function

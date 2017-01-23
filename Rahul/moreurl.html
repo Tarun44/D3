@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>.....Method of deferred.........</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- For adding the styles of Data-tables -->
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+ <!--CSS for Datatables -->
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+</head>
+<body>
+	<div class="container">
+	<h1 class="text-success text-center"> Uses of When Method of deferred Call </h1>
+
+	<table class="table table-striped table-bordered table-hover" id="mytable">
+
+	</table>	
+
+<script>
+
+
+var dfd1 = $.ajax({
+    url:"https://api.myjson.com/bins/1bcwh3",
+    context:document.body, 
+ });                                                                                                                                                                                                                                                                                 
+ var dfd2 = $.ajax({
+     url:"https://api.myjson.com/bins/13oerr",
+     context:document.body, 
+});
+
+$.when(dfd1,dfd2).then( 	
+ 
+ function(v,v1){ 
+ 	var mydata1 = v[0];
+ 	var mydata2=v1[0];
+   
+    // console.log(mydata1);
+    // console.log(mydata1);
+   
+   var keys1 = Object.keys(mydata1);
+   var val1 = Object.values(mydata1);
+   
+   // console.log(keys1);
+   // console.log(val1);
+
+   var keys2 = Object.keys(mydata2);
+   var val2 = Object.values(mydata2);
+   
+   // console.log(keys2);
+   // console.log(val2);
+   
+   var heading = [];
+   var items = [];
+
+   heading.push("<tr>");	
+	 $.each(keys1,function(key,value){
+	 		heading.push("<th>"+value+"</th>");
+});   
+
+	 $.each(keys2,function(key,value){
+	 		heading.push("<th>"+value+"</th>");
+});  
+		heading.push("</tr>") 
+   
+    items.push("<tr>");	
+	 $.each(val1,function(key,value){
+	 		items.push("<td>"+value+"</td>");
+});   
+	 $.each(val2,function(key,value){
+	 		items.push("<td>"+value+"</td>");
+});  
+
+
+    // console.log(v);
+    $('<tbody>',{html:heading.join('')}).appendTo("table");
+    $('<tbody>',{html:items.join('')}).appendTo("table");
+     
+	$('#mytable').DataTable(); 
+  });
+
+
+    	
+
+
+	
+</script>
+</div>
+</body>
+</html>
