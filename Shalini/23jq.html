@@ -26,18 +26,18 @@
 	</table>
 	</div>
 	
-	<script type="text/javascript">
+	<script>
 		$.getJSON("data.json",function(data){
 			var items = [];
 			$.each(data, function(key,val){
 				items.push("<tr>");
-				items.push("<td id=''"+key+"''>"+val.name+"</td>");
-				items.push("<td id=''"+key+"''>"+val.age+"</td>");
-				items.push("<td id=''"+key+"''>"+val.company +"</td>");
+				items.push("<td>"+value.name+"</td>");
+				items.push("<td>"+val.age+"</td>");
+				items.push("<td>"+val.company +"</td>");
 				items.push("</tr>");
 
 			});
-			$("<tbody/>", {html: items.join(**)}).appendTo("table");
+			$("<tbody/>",{html:items.join("|")}).appendTo("table");
 		});
 	
 	</script>
