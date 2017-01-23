@@ -1,0 +1,39 @@
+
+<html>
+<head>
+    <title></title>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+</head>
+
+
+
+<body>
+    <div id="tableDiv"></div>
+    <div id="displayTable"></div>
+    <script>
+    $( document ).ready( function( $ ) {
+        $.ajax({
+                "url": 'arrays.txt',
+                "success": function(json) {
+                    var tableHeaders;
+                    $.each(json.columns, function(i, val){
+                        tableHeaders += "<th>" + val + "</th>";
+                    });
+                     
+                    $("#tableDiv").empty();
+                    $("#tableDiv").append('<table id="displayTable" class="display" cellspacing="0" width="100%"><thead><tr>' + tableHeaders + '</tr></thead></table>');
+                
+                    $('#tableDiv').DataTable(json);
+                },
+                "dataType": "json"
+            });
+    });
+    </script>
+</body>
+</html>

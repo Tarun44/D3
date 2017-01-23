@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+
+<ol >
+<li>tea</li>
+<li>coffee</li>
+<li>hh</li>
+</ol>
+<p class="d"></p>
+<button class="b">click</button>
+
+
+<script>
+
+$(document).ready(function()
+{
+	$(".b").click(function()
+	{
+		$("li").each(function()
+		{
+alert($(this).text());
+		});
+	});
+
+
+var numbers = [1, 2, 3, 4, 5, 6];
+$.each(numbers , function (index, value){
+  console.log(index + ':' + value); 
+});
+});
+
+</script>
+</body>
+</html>

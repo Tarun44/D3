@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>promise</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<button id="b" >click</button>
+<p id="c" ></p>
+
+<script>
+
+var promise = $.ajax({
+  url: "demo.txt"
+});
+  
+promise.done(successFunction);
+promise.fail(errorFunction);
+promise.always(alwaysFunction);
+
+
+function successFunction()
+{
+	alert("successFunction");
+}
+function errorFunction()
+{
+	alert("errorFunction");
+}
+function alwaysFunction()
+{
+	alert("alwaysFunction");
+
+
+}
+$(document).ready(function()
+{
+	$("#b").click(function()
+	{
+		$("#c").load("demo.txt")
+	});
+});
+</script>
+</body>
+</html>

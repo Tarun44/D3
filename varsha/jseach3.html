@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+$(document).ready(function(){
+$("tr").each(function(x) { if (x % 2) this.style.backgroundColor = "#fff"; });
+    
+    $(".addrow").click(function(){
+    $(".tblcls").append("<tr><td>Table data</td><td>Table data</td></tr>");
+    $("tr").each(function(x) { if (x % 2) this.style.backgroundColor = "#fff"; });
+    });
+    $(".remove").click(function()
+    {
+       $(".tblcls").find('.tblcls:contains(Table data)').remove();
+
+    });
+  
+});
+</script>
+
+<style>
+.tblcls{
+    border-collapse: collapse;
+    border: 2px solid #006655;
+  }
+.tblcls th{
+    border: 1px dashed black;
+    color: #fff;
+    background:#006655;
+  }
+.tblcls tr{
+    padding:10px;
+    border: 1px dotted black;
+    color: #000;
+    background:yellow;
+  }
+.tblcls td{
+    padding:10px;
+    border: 1px dotted black;
+    color: #000;
+
+  }
+</style>
+</head>
+
+<body>
+<button class="addrow">Add row</button>
+<button class="remove">remove</button>
+<table class="tblcls">
+  <tr>
+      <th>Col 1</th>
+      <th>Col 2</th>
+  </tr>
+  <tr>
+      <td>Table data</td>
+      <td>Table data</td>
+  </tr>
+  <tr>
+      <td>Table data</td>
+      <td>Table data</td>
+  </tr>
+  <tr>
+      <td>Table data</td>
+      <td>Table data</td>
+  </tr>  
+</table>
+</body>
+</html>
+
+

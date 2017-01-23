@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<style >
+#sliderContainer {
+  width: 800px;
+  margin: 0;
+  padding: 0px;
+  position: relative;
+  overflow: hidden;
+}
+#sliderContainer .slider {
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  float: left;
+  position: relative;
+}
+</style>
+<body>
+<div id="sliderContainer">
+<div id="sliderWrapper">
+<img src="img/pic1.jpg" />
+<img src="img/pic2.jpg" />
+<img src="img/pic3.jpg" />
+<img src="img/pic4.jpg" />
+<img src="img/room.jpg" />
+</div>
+</div>
+<script>
+$(function() {
+  var curPos = 0;
+  var slider = $('.slider');
+  var cntImages= slider.length;
+  var sliderWidth = slider.width();
+  $('#sliderWrapper').css('width', sliderWidth * cntImages);
+  setInterval(SlideImage, 2000);
+  function SlideImage() {
+    if (curPos == cntImages - 1)
+      curPos = 0;
+    else
+      curPos++;
+     $('#sliderWrapper').animate({
+      'marginLeft': sliderWidth * (-curPos)
+    });
+  }
+});
+</script>
+
+</body>
+</html>
