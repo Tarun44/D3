@@ -20,6 +20,9 @@
  <!--CSS for Datatables -->
 <link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
 
+<!--JS for Datatables -->
+<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
+
 </head>
 <body>
 	<div class="container">
@@ -85,11 +88,12 @@ $.when(dfd1,dfd2).then(
 
 
     // console.log(v);
-    $('<tbody>',{html:heading.join('')}).appendTo("table");
+    $('<thead>',{html:heading.join('')}).appendTo("table");
     $('<tbody>',{html:items.join('')}).appendTo("table");
      
-	$('#mytable').DataTable(); 
+	 $('#mytable').dataTable(); 
   });
+
 
 
     	

@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>About D3 Axises()</title>
+<!--- Including d3 library-------->
+<script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+	<script>
+		 var xScale = d3.scale.linear()
+							.domain([0,90])
+							.range([0,800]);
+
+		var yScale = d3.scale.linear()
+							.domain([0,90])
+							.range([650,0]);					
+		
+		var xAxis = d3.svg.axis()
+					  .scale(xScale)
+					  .orient("bottom")
+					  .ticks(5);
+
+		var yAxis = d3.svg.axis()
+					  .scale(yScale)
+					  .orient("left")
+					  .ticks(5);			  
+
+		var canvas = d3.select("body")
+						.append("svg")
+						.attr("width",800)
+						.attr("height",700);
+
+						canvas.append("g")
+						.attr("transform","translate(125,650)")
+						.call(xAxis);
+						
+						canvas.append("g")
+						.attr("transform","translate(125,0)")
+						.call(yAxis);
+
+
+
+		
+			 
+			 // .append("g")
+			 // .attr("transform","translate(10,500)")
+			 //canvas.call(xAxis);
+
+// var xAxis = d3.svg.axis()
+//     .scale(x)
+//     .orient("bottom")
+//     // .tickFormat(d3.time.format("%Y-%m"));
+
+
+
+// var svg = d3.select("body").append("svg")
+//     .attr("width", 400)
+//     .attr("height",400)
+//   .append("g")
+//     .attr("transform", 
+//           "translate(" + 50+ "," + 50 + ")")
+//      .call(xAxis);
+	</script>
+</body>
+</html>

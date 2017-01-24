@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Basics of D3.js Library</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- Library for D3.js-->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+	<h1 class="text-center">Welcome To D3.js Library</h1>
+
+	<h3 class="text-danger">Introduction</h3>
+	
+	<p class="text-justify"> D3.js is a JavaScript library for manipulating documents based on data. D3 helps you bring data to life using HTML, SVG, and CSS. D3’s emphasis on web standards gives you the full capabilities of modern browsers without tying yourself to a proprietary framework, combining powerful visualization components and a data-driven approach to DOM manipulation.</p>
+
+	<p class="text-justify">D3 allows you to bind arbitrary data to a Document Object Model (DOM), and then apply data-driven transformations to the document. For example, you can use D3 to generate an HTML table from an array of numbers. Or, use the same data to create an interactive SVG bar chart with smooth transitions and interaction.</p>
+
+	<p class="text-justify">D3 is not a monolithic framework that seeks to provide every conceivable feature. Instead, D3 solves the crux of the problem: efficient manipulation of documents based on data. This avoids proprietary representation and affords extraordinary flexibility, exposing the full capabilities of web standards such as HTML, SVG, and CSS. With minimal overhead, D3 is extremely fast, supporting large datasets and dynamic behaviors for interaction and animation. D3’s functional style allows code reuse through a diverse collection of components and plugins.</p>
+ 	</div>
+ 	<svg width="250" height="250">
+ 		<rect x="0" y="0" width="100" height="100" fill="red" stroke="green"></rect>
+ 		<rect x="120" y="0" width="100" height="100" fill="green"></rect>
+ 		<rect x="0" y="120" width="100" height="100" fill="aqua"></rect>
+ 		<rect x="120" y="120" width="100" height="100" fill="crimson"></rect>
+ 		<rect x="70" y="50" width="100" height="100" fill="none" stroke-width="5" stroke="blue"></rect>
+ 	</svg>
+
+ 	<svg height="250" width="100">
+ 		<circle cx="30" cy="30" r="10" fill="aqua"></circle>
+ 		<circle cx="50" cy="60" r="20" fill="crimson"></circle>
+ 		<circle cx="70" cy="100" r="10" fill="none" stroke="black" stroke-width="2"></circle>
+ 	</svg>
+ 	<svg height="250" width="250">
+ 		<line x1="50" y1="50" x2="100" y2="150" style="stroke:rgb(255,0,0);stroke-width:2"></line>
+ 		<line x1="100" y1="150" x2="150" y2="100" style="stroke:rgb(0,255,0);stroke-width:2"></line> 
+ 		<line x1="150" y1="100" x2="200" y2="150" style="stroke:rgb(0,0,255);stroke-width:2"></line> 
+ 		<line x1="200" y1="150" x2="250" y2="100" style="stroke:black;stroke-width:2"></line>
+ 		<line x1="50" y1="50" x2="250" y2="100" style="stroke:aquamarine;stroke-width:2"></line>
+ 		<line x1="100" y1="150" x2="150" y2="150" style="stroke:grey;stroke-width:2"></line>
+ 		<line x1="125" y1="150" x2="125" y2="200" style="stroke:grey;stroke-width:2"></line>
+ 	</svg>
+ 		
+ 	<svg width="250" height="250">
+ 		<path d="M50 50 L100 150 L150 100 L50 50"stroke-width="2" stroke="red" fill="blue"></path>
+ 		<path d="M50 100 L100 50 L140 140 L50 100"stroke-width="2" stroke="red" fill="yellow"></path>
+ 	</svg>
+
+ 	<svg width="250" height="250">
+ 		<rect x="0" y="0" width="50" height="200" fill="lightblue"></rect>
+ 		<rect x="50" y="200" width="200" height="50" fill="lightblue"></rect>
+ 	  <g transform="translate(80,20)">
+ 		<circle cx="0" xy="0" r="10" />
+ 		<circle cx="100" cy="100" r="10" />
+ 		<circle cx="130" cy="120" r="10" />
+ 		<circle cx="80" cy="120" r="10" />
+ 		<circle cx="150" cy="120" r="10" />
+ 	   </g>	
+ 	</svg>
+    <svg width="250" height="250">
+    	<rect x="0" y="0" width="50" height="200" fill="blue"></rect>
+ 		<rect x="50" y="200" width="200" height="50" fill="blue"></rect>
+ 	  <g transform="translate(50,0)">
+ 		<rect x="5" y="0" width="30" height="200" />
+ 		<rect x="55" y="50" width="40" height="150" />
+ 		<rect x="105" y="100" width="10" height="100" />
+ 		<rect x="155" y="150" width="20" height="50" />
+ 	  </g>
+    </svg>
+
+	<script>
+		// d3.select("p")
+		// .transition("trans_1")
+		// .delay(0)
+		// .duration(500)
+		// .ease("linear")
+		// .style("color","blue")
+		// //.style("font-size","large");
+	</script>
+</body>
+</html>
