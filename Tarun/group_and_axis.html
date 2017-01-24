@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Groups and Axis</title>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+     
+     <script>
+     	
+     	var dataArry = [20,50,30,5,25,60];
+     	var height = 1000;
+     	var width = 1000;
+
+     	var scale = d3.scale.linear()
+     					.domain([0,50])
+     					.range([0,width]);
+
+		var color = d3.scale.linear()
+						.domain([0,50])
+						.range(["red","pink"]);
+
+		var axis = d3.svg.axis()
+						.ticks(5)
+						.scale(scale);
+
+     	var main = d3.select("body")
+     					.append("svg")
+     					.attr("height",height)
+     					.attr("width",width)
+     					.append("g")
+     					.attr("transform","translate(100,100)");
+
+		var rect = main.selectAll("rect")
+						.data(dataArry)
+						.enter()
+								.append("rect")
+								.attr("width",function(d){ return scale(d);})
+								.attr("height",50)
+								.attr("fill",function(d){ return color(d)})
+								.attr("y",function(d,i){ return i * 50});
+
+		main.append("g")
+				.attr("transform","translate(0,300)")
+				.call(axis);
+								
+
+     </script>
+</body>
+</html>
