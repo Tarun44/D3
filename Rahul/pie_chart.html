@@ -1,0 +1,73 @@
+<!DOCTYPE>
+<html>
+<head>
+<title>Understanding the Pie Chart  </title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!--Including the D3.js Library-->
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<style>
+	svg{
+		background-color: beige;
+		margin:150px;
+	}
+</style>	
+</head>
+<body>
+	<h1 class="text-center text-success"> Understanding the Pie Charts </h1>
+	<script>
+			var w = 500;
+			var	h = 800;
+			var r = 50;
+			 	 	
+			 var color=d3.scale.ordinal()
+      				.range(["red","blue","orange"]);
+      	
+
+
+			 // var data = [{"label":"one", "value":20}, 
+    //         			{"label":"two", "value":50}, 
+    //        				{"label":"three", "value":30}
+    //        				];
+    			var data = [10,50,60];
+           	
+      	
+      	var canvas = d3.select("body")
+      					.append("svg")
+      					.attr("width",w)
+      					.attr("height",h);
+
+		var group = canvas.append("g")
+							.attr("transform","translate(100,100)");
+
+		var arc= d3.svg.arc()
+					.innerRadius(0)
+					.outerRadius(r);
+
+		var pie= d3.layout.pie()
+					.value(function(d){
+						return d;
+					});
+
+		var arcs = group.selectAll(".arc")
+						.data(pie(data))
+						.enter()
+						.append("g")
+						 .attr("class","arc");
+
+		arcs.append("path")
+				.attr("d",arc)
+				.attr("fill",function(d){return color(d.data);});
+
+		arcs.append("text")
+				.attr("transform",function(d){return "translate(" + arc.centroid(d)+")";})
+				.attr("text-anchor","middle")
+				.attr("font-size","1.em")
+				.text(function(d){ return d.data});
+
+	</script>
+</body>
+</html>	
+		

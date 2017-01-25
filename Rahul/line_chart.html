@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>About Line Chart</title>
+	<!-- Library for D3.js-->
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<style>
+	path {
+				stroke: steelblue;
+				stroke-width: 1;
+				fill: none;
+			}
+	.x.axis path {
+			  display: none;
+			}
+
+			.y.axis line, .y.axis path {
+			  fill: none;
+			  stroke: #000;
+			}
+</style>
+</head>
+<body>
+	<script>
+		
+		var w =1000;
+		var h =500;
+		var margin_bottom = 20;
+		var margin_left = 125;
+		var margin_right = 75;
+		var magrin_top = 20;
+
+		var data = [3,5,6,1,8,7,9,15,10,12,0,11];
+
+		var x =d3.scale.linear()
+						.domain([0,data.length])
+						.range([0,w-(margin_left+margin_right)]);
+
+		var y = d3.scale.linear()
+						.domain([0,15])
+						.range([h-margin_bottom,0]);
+
+		var line = d3.svg.line()
+					  .x(function(d,i){
+					  	return x(i);
+					  })
+
+					  .y(function(d){
+					  	return y(d);
+					  });
+
+		var xAxis = d3.svg.axis()
+							.scale(x)
+							.ticks(8)
+							.orient("bottom");
+
+		var yAxis = d3.svg.axis()
+							.scale(y)
+							.ticks(4)
+							.orient("left");					
+
+		var graph = d3.select("body")
+						.append("svg")
+						.attr("width",w)
+						.attr("height",h)
+
+						graph.append("g")
+						.attr("transform","translate("+margin_left+","+(h-margin_bottom)+")")
+						.call(xAxis)
+						
+						graph.append("g")
+						.attr("transform","translate("+margin_left+",0)")
+						.call(yAxis);
+
+						graph.append("g").append("svg:path").attr("d", line(data));
+						
+	</script>
+</body>
+</html>
