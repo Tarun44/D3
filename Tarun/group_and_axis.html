@@ -9,20 +9,28 @@
      <script>
      	
      	var dataArry = [20,50,30,5,25,60];
-     	var height = 1000;
-     	var width = 1000;
+     	var height = 500;
+     	var width = 300;
 
      	var scale = d3.scale.linear()
-     					.domain([0,50])
-     					.range([0,width]);
+     					.domain([0, 60])
+						 .range([0,280]);
+var yscale = d3.scale.linear()
+     					.domain([0, 100])
+						 .range([0,280]);
 
 		var color = d3.scale.linear()
-						.domain([0,50])
+						.domain([0, 60])
 						.range(["red","pink"]);
 
-		var axis = d3.svg.axis()
+		var xaxis = d3.svg.axis()
 						.ticks(5)
 						.scale(scale);
+
+		var yaxis = d3.svg.axis()
+						.ticks(6)
+						.orient("left")
+						.scale(yscale);
 
      	var main = d3.select("body")
      					.append("svg")
@@ -38,11 +46,15 @@
 								.attr("width",function(d){ return scale(d);})
 								.attr("height",50)
 								.attr("fill",function(d){ return color(d)})
-								.attr("y",function(d,i){ return i * 50});
-
+								.attr("y",function(d,i){ return i * 60});
+  
 		main.append("g")
-				.attr("transform","translate(0,300)")
-				.call(axis);
+				.attr("transform","translate(0,360)")
+				.call(xaxis);
+		main.append("g")
+    .attr("class", "axis")
+    .attr("transform", "translate(0,80)")
+    .call(yaxis);
 								
 
      </script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>path</title>
+		<script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+     
+     <script>
+     	
+     	var main = d3.select("body").append("svg")
+     					.attr("width",500)
+     					.attr("height",500);
+
+     	var data=[
+{"x": 10, "y": 62},
+{"x": 20, "y": 72},
+{"x": 32, "y": 80},
+{"x": 44, "y": 90},
+{"x": 51, "y": 102},
+{"x": 60, "y": 112},
+{"x": 75, "y": 122}
+];
+
+
+			var group = main.append("g")
+						.attr("transform","translate(100,100)");
+
+			var line= d3.svg.line()
+						.x(function(d){ return d.x;})
+						.y(function(d){ return d.y;});
+
+group.selectAll("path")
+				.data([data])
+				.enter()
+				.append("path")
+				.attr("d",line)
+				.attr("fill","none")
+				.attr("stroke","#000")
+				.attr("stroke-width",1);
+     </script>
+
+</body>
+</html>
