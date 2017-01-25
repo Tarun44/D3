@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Difference between each and map in callback</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+    var intArray = [1, 2, 3, 4, 5];
+
+    function functionA(index, element) {
+        return element * 5;
+    }
+
+    function functionB(element, index) {
+        return element * 5;
+    }
+
+    var result1 = $.each(intArray, functionA);
+    var result2 = $.map(intArray, functionB);
+
+    document.write('each = ' + result1);
+    document.write('<br/>')
+    document.write('map = ' + result2);
+});
+</script>
+</head>
+</html>

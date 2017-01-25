@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var jsObject = {
+                'USA': 'Washington D.C.',
+                'India': 'New Delhi',
+                'UK': 'London',
+                'Australia': 'Canberra'
+            };
+
+            var result = '';
+
+            $.each(jsObject, function (key, value) {
+                result += key + ' - ' + value + '<br/>';
+            });
+
+            $('#resultDiv').html(result);
+        });
+    </script>
+</head>
+<body style="font-family:Arial">
+    <div id="resultDiv"></div>
+</body>
+</html>

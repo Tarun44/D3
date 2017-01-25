@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Ajax Requesting and populating data in table</title>
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> 
+<style>
+
+</style>
+
+</head>
+
+<body>
+<table class="table table-striped table-bordered table-hover" id="DataTable">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>index</th>
+      <th>guid</th>
+      <th>isActive</th>
+      <th>balance</th>
+      <th>picture</th>
+      <th>age</th>
+      <th>eyeColor</th>
+      <th>name</th>
+      <th>gender</th>
+      <th>company</th>
+      <th>email</th>
+      <th>phone</th>
+      <th>address</th>
+      <th>about</th>
+      <th>registered</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th>tags</th>
+      <th>friends</th>
+      <th>greeting</th>
+      <th>favoriteFruit</th>
+    </tr>  
+  </thead>  
+</table>
+ 
+<script>
+$.getJSON("json.json",function(data){
+  var items = [];
+  $.each(data,function(key,value){
+
+    items.push("<tr>");   
+    items.push("<td>"+value._id+"</td>");
+    items.push("<td>"+value.index+"</td>");
+    items.push("<td>"+value.guid+"</td>");
+    items.push("<td>"+value.isActive+"</td>");
+    items.push("<td>"+value.balance+"</td>");
+    items.push("<td>"+value.picture+"</td>");
+    items.push("<td>"+value.age+"</td>");
+    items.push("<td>"+value.eyeColor+"</td>");
+    items.push("<td>"+value.name+"</td>");
+    items.push("<td>"+value.gender+"</td>");
+    items.push("<td>"+value.company+"</td>");
+    items.push("<td>"+value.email+"</td>");
+    items.push("<td>"+value.phone+"</td>");
+    items.push("<td>"+value.address+"</td>");
+    items.push("<td>"+value.about+"</td>");
+    items.push("<td>"+value.registered+"</td>");
+    items.push("<td>"+value.latitude+"</td>");
+    items.push("<td>"+value.longitude+"</td>");
+    items.push("<td>"+value.tags+"</td>");
+    var friends=[];
+    
+      $.each(value.friends,function(k,v){         
+     friends.push(v.name);
+      });
+      
+    items.push("<td>"+(friends.join(","))+"</td>");
+    items.push("<td>"+value.greeting+"</td>");
+    items.push("<td>"+value.favoriteFruit+"</td>");
+    items.push("</tr>");
+  });
+   $("<tbody/>",{html:items.join(";")}).appendTo("table");
+});
+$(document).ready(function(){
+   $('#DataTable').DataTable();
+});
+</script>
+
+</body>
+</html>

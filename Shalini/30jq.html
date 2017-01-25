@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Difference in map and each iteration</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+    var intArray = [1, 2, 3, 4, 5];
+
+    $.each(intArray, function (index, element) {
+        if (element == 3)
+            return false;
+
+        document.write(element + ',');
+    });
+
+    document.write('<br/>');
+
+    $.map(intArray, function (element, index) {
+        if (element == 3)
+            return false;
+
+        document.write(element + ',');
+    });
+});
+</script>
+</head>
+</html>
