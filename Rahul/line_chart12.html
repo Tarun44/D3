@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Line Chart</title>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+	<style>
+	svg{
+		background-color:azure;
+		margin-left: 100px;
+		margin-top: 100px;
+	}
+	div.tooltip {	
+    position: absolute;			
+    text-align: center;			
+    width: 60px;					
+    height: 28px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: lightsteelblue;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+	</style>
+</head>
+<body>
+	<script>
+
+		var height = 600;
+		var width = 600;
+		var margin_left = 50;
+		var margin_right = 50;
+		var margin_top = 50;
+		var margin_bottom = 50;
+
+		var canvas = d3.select("body")
+						.append("svg")
+						.attr("width",width)
+						.attr("height",height);
+
+		d3.json("line_data.json",function(i,chartConfig){
+			console.log(chartConfig);
+			
+		xScale = d3.scale.linear()
+					.range([margin_left,width-margin_right])
+					.domain([
+								d3.min(chartConfig.data,function(d){ return +d.year ;}),
+								d3.max(chartConfig.data,function(d){ return +d.year;})
+						]);	
+		yScale = d3.scale.linear()
+					.range([height-margin_top,margin_bottom])
+					.domain([
+								d3.min(chartConfig.data,function(d){ return +d.sale ;}),
+								d3.max(chartConfig.data,function(d){ return +d.sale;})
+						]);	
+
+		xAxis =      d3.svg.axis()
+					.orient("bottom")
+					.scale(xScale);
+					// .ticks(8)
+					
+
+		yAxis = 	d3.svg.axis()
+					.orient("left")
+					.scale(yScale);
+					// .ticks(8)
+					
+
+		var lineSelection = d3.svg.line() 
+								.x(function(d){
+								 return xScale(d.year);
+								  }) 
+								.y(function(d){
+								 return yScale(d.sale) 
+								});
+
+		var div = d3.select("body").append("div")	
+    .attr("class", "tooltip")				
+    .style("opacity", 0);
+						
+								canvas.append("svg:path")
+								.attr('d', lineSelection(chartConfig.data)) 
+								.attr('stroke', 'green')
+								.attr('stroke-width', 2)
+								.attr('fill', 'none');	
+
+								 canvas.append("svg:path")
+								 .attr('d', lineSelection(chartConfig.data2))
+								 .attr('stroke', 'red') 
+								 .attr('stroke-width', 3)
+								 .attr('fill', 'none');			 
+
+								 canvas.append("svg:path")
+								 .attr('d', lineSelection(chartConfig.data3))
+								 .attr('stroke', 'blue') 
+								 .attr('stroke-width', 4)
+								 .attr('fill', 'none');	
+
+		// Add the scatterplot
+    canvas.selectAll("dot")	
+        .data(chartConfig.data)			
+    .enter().append("circle")								
+        .attr("r", 3)	
+        .attr("fill","red")	
+        .attr("cx", function(d) { return xScale(d.year); })		 
+        .attr("cy", function(d) { return yScale(d.sale); })		
+        .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            div	.html((d.year) + "<br/>"  + d.sale)	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					
+        .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });		
+     canvas.selectAll("dot")	
+        .data(chartConfig.data2)			
+    .enter().append("circle")								
+        .attr("r", 3)		
+        .attr("cx", function(d) { return xScale(d.year); })		 
+        .attr("cy", function(d) { return yScale(d.sale); })		
+        .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            div	.html((d.year) + "<br/>"  + d.sale)	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					
+        .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });		
+
+     canvas.selectAll("dot")	
+        .data(chartConfig.data3)			
+    .enter().append("circle")								
+        .attr("r", 4)		
+        .attr("cx", function(d) { return xScale(d.year); })		 
+        .attr("cy", function(d) { return yScale(d.sale); })		
+        .on("mouseover", function(d) {		
+            div.transition()		
+                .duration(200)		
+                .style("opacity", .9);		
+            div	.html((d.year) + "<br/>"  + d.sale)	
+                .style("left", (d3.event.pageX) + "px")		
+                .style("top", (d3.event.pageY - 28) + "px");	
+            })					
+        .on("mouseout", function(d) {		
+            div.transition()		
+                .duration(500)		
+                .style("opacity", 0);	
+        });		
+
+        canvas.append("g")
+					.call(xAxis)
+					.attr("transform", "translate(0," + (height - margin_bottom) + ")");
+
+		canvas.append("g")
+					.call(yAxis)
+					.attr("transform", "translate(" + (margin_left) + ",0)");								 
+
+		})
+				
+		
+
+													
+	</script>
+</body>
+</html>

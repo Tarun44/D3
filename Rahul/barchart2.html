@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Understanding the bar charts</title>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<style>
+.bar{
+	stroke:none;
+	fill:steelblue;
+}
+.bar:hover {
+  fill: aquamarine;
+}
+.axis text{
+	font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+
+}
+.axis path{
+  fill:none;
+  stroke:black;
+  stroke-width: 1.5px;
+}
+svg{
+	background-color: azure;
+	margin-top: 100px;
+	margin-left: 200px;
+}
+
+</style>
+</head>
+<body>
+<script>
+
+		var margin = {top:10, right:10,bottom:75,left:30}
+		width = 600 - margin.left - margin.right,
+		height = 800 - margin.top - margin.bottom;
+
+
+		var svg = d3.select("body")
+				.append("svg")
+				.attr("width",width + margin.right + margin.left)
+				.attr("height", height + margin.top + margin.bottom);
+
+		var chart = svg.append("g")
+					.attr("transform","translate("+ margin.left +","+ margin.top +")" );
+// 	var data = [
+//     {name:"Apples",  value: 12},
+//     {name:"Pears" ,  value: 15},
+//     {name:"Oranges", value: 21},
+//     {name:"Bananas", value: 19}
+// ]
+	d3.json("bar_data.json", function(d) {
+		// console.log();
+  // 				d.name = d.name;
+  // 				console.log(d.name);
+  // 				d.value = +d.value; 
+  // 				return d;
+
+  	var values = d.map(function(d){
+						return d.value;
+					});
+	var names = d.map(function(d){
+						return d.name;
+					});
+	var y = d3.scale.linear()
+					.range([height,0])
+					.domain([0,d3.max(values)]);
+
+	var x = d3.scale.ordinal()
+					.rangeRoundBands([0,width],.7)
+					.domain(names);
+
+	var xAxis = d3.svg.axis()
+					.scale(x)
+					.orient("bottom");
+					
+	var yAxis = d3.svg.axis()
+					.scale(y)
+					.orient("left")
+					.ticks(10);
+    
+	chart.selectAll(".bars")
+				.data(d)
+				.enter()
+				.append("rect")
+				.attr("x",function(d){return x(d.name);})
+				.attr("y",function(d){return y(d.value);})
+				.attr("width",function(d){return x.rangeBand();})
+				.attr("height",function(d){return height - y(d.value);})
+				.attr("class","bar");
+
+svg.append("g")
+   .attr("class", "x axis")
+   .attr("transform", "translate(" + margin.left + ", " + (height +   margin.top)  + ")")
+   .call(xAxis);
+   // .selectAll("text");
+   // .style({"text-anchor":"end"})
+   // .attr("transform", "translate(-10,0)rotate(-65)");
+
+svg.append("g")
+   .attr("class", "y axis")
+   .attr("transform", "translate(" + (margin.left) + ", " + margin.top + ")")
+   .call(yAxis);
+  		},function(error, data) {
+  			if (error) throw error;
+	
+	
+   });																								
+</script>
+</body>
+</head>
+</html>
