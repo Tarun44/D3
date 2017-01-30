@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bar</title>
+	<script src="https://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+<script>
+
+var axis = d3.svg.axis()
+             .ticks(15)
+             .scale(widthScale);
+
+anvas.append("g")
+        .attr("transform", "translate (0,700)")
+        .call(axis);                     
